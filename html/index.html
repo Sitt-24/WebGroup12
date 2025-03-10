@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O.O Adventures</title>
+
+        <!-- link to style.css -->
+        <link rel="stylesheet" href="../Css/style.css">
+        <!-- from fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <!-- Google Fonts Link For Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" > 
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <script defer src="../Js/main.js"></script>
+
+    </head>
+    <body>
+
+        <div class="upper"> 
+
+            <!-- Header -->
+            <header>
+                <div class="logo-container">
+                    <a href="index.html">
+                        <img src="../images/O.O_Logo.png" alt="LOGO" class="logo" >
+                    </a>
+                </div>
+            
+                <div class="bar-btn" id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            
+                <!-- Nav Popup  -->
+            
+                <div class="nav-popup nav-popup-toggle">
+                    <a href="../html/index.html">Home</a>
+                    <a href="../html/index.html#feature-stories">Feature Stories</a>
+                    <a href="../html/Reviews.html">Reviews</a>
+                    <a href="../html/Packages.html">Our Plans</a>
+                </div>
+            
+                <!-- Main Nav Menu -->
+
+                <div class="nav">
+                    <div class="nav-items">
+                        <a href="../html/index.html">Home</a>
+                        <a href="../html/index.html#feature-stories">Feature Stories</a>
+                        <a href="../html/Reviews.html">Reviews</a>
+                        <a href="../html/Packages.html">Our Plans</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <img src="../images/search-icon-png-21.png" class="Find-i" id="Find-i"  alt="Find-icon">
+                    
+                    <button class="Login-popup">Login</button>
+
+                    <!-- Search Button -->
+                    <div class="Find-box1" id="Find-box1">
+                        <div class="Search-box1">
+                            <input type="text" placeholder="Type here ....">
+                            <label class="fi-icon">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- login Button -->
+            <section class="login-section">
+                <div class="login-wrapper">
+                    <span class="i-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="reg-box">
+
+                        <!-- Login Part -->
+                        <div class="f-box login">
+                            <div class="reg-title">
+                                <h2>Login</h2>
+                                <p>Please login to use the platform</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="log-btn">Login</button>
+
+                                <div class="lreg-link">
+                                    <p>Don't have an account? <a href="#" class="reg-link">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Register Part -->
+                        <div class="f-box register">
+                            <div class="reg-title">
+                                <h2>Registration</h2>
+                                <p>Please provide the following to verify
+                                    your identify</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Full Name</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox" id="show-password-checkbox">
+                                        Show Password
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="reg-btn">Register</button>
+
+                                <div class="lreg-link">
+                                    <p>Already have an account ?<a href="#" class="log-link">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logmedia-opt">
+                        <a href="https://www.gmail.com">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Login with Google</span>
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section HOME -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col1">
+                        <h1>Are you Bored?<br><span>O.O</span></h1>
+                            <p>Don't fall asleep no mOOre.<br>
+                            Let's cOme on bOard.</p>
+                        <br><br>
+                        <a href="../html/storySelector.html" class="btn"><span>Let's Play!</span></a>
+                    </div>
+                    <div class="col1">
+                        <img src="../images/GIF/forest-background-layering-demo.gif" alt="Background1" width="600">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            <!-- Site Description -->
+            <div class="middle">
+                <div class="category">
+                    <div class="small-container">
+                        <div class="col2">
+                            <div class="ex-text">
+                                    <h1>Welcome to O.O Adventure!!!</h1>
+                                        <small>
+                                            O.O adventures is a web storytelling game platform. O.O features exciting and mysterious stories plot, not the passive entertainment of movies and cartoon.
+                                            In O.O adventures, your choices decide the path of your story.<br><br>
+                                            We’ve also opened up our storytelling platform and have the world’s largest community of interactive stories, with 100+ stories.<br>
+                                            You can enjoy every single stories after register an account with us. We couldn't wait you to shape exhilarating moments with us. 
+                                        </small>
+                                        <br><br><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- feature-stories(Carousel) -->
+
+                <div class="container4">
+
+                    <section id="feature-stories" class="feature-stories">
+                        <h2>Featured Stories</h2>
+                        <div class="carousel-container">
+                            <button class="prev-btn">&#10094;</button> <!-- Left arrow -->
+                            <div class="carousel">
+                                <!-- Story Card 1 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/christmas.jpg" alt="Before the Christmas" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Before the Christmas</h3>
+                                    </div>
+                                </div>
+                    
+                                <!-- Story Card 2 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/jackandbeanstalk.jpg" alt="JackAndBeanstalk" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Jack and the Beanstalk</h3>
+                                    </div>
+                                </div>
+                    
+                                <!-- Story Card 3 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Goldilock And 3 Bears</h3>
+                                    </div>
+                                </div>
+
+                                <!-- Story Card 4 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/HP1.jpg" alt="HalfBlood Prince" class="story-image">
+                                    <div class="story-info">
+                                        <h3>HalfBlood Prince</h3>
+                                    </div>
+                                </div>
+                    
+                                <!-- Story Card 5 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/HP2.jpg" alt="Goblet of Fire" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Goblet of Fire</h3>
+                                    </div>
+                                </div>
+                    
+                                <!-- Story Card 6 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/LRR.jpg" alt="Little Red Riding Hood" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Little Red Riding Hood</h3>
+                                    </div>
+                                </div>
+
+                                <!-- Story Card 7 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/Rapunzel.jpg" alt="Rapunzel" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Rapunzel</h3>
+                                    </div>
+                                </div>
+                    
+                                <!-- Story Card 8 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/wildswans.jpg" alt="WildSwans" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Wild Swans</h3>
+                                    </div>
+                                </div>
+                    
+                                <!-- Story Card 9 -->
+                                <div class="story-card">
+                                    <img src="../images/StoryCard/hanselandgretal.jpg" alt="Hansel&Gretal" class="story-image">
+                                    <div class="story-info">
+                                        <h3>Hansel and Gretal</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="next-btn">&#10095;</button> <!-- Right arrow -->
+                        </div>
+                        <div class="dots-container"></div> <!-- Dots for navigation -->
+                    </section>
+                </div>    
+        
+                <!-- Exclusive Offer-->
+
+                <div class="offer">
+                    <div class="small-container">
+                        <div class="row">
+                            <div class="col2">
+                                <img src="../images/fireflySummer.jpg" class="ex-img" alt="EX-">
+                            </div>
+                            <div class="col2">
+                                <div class="ex-text">
+                                    <p>!!!New Story Available!!!</p>
+                                        <h1>The Firefly Summer</h1>
+                                            <small>
+                                                Login now and enjoy our newest stories 'The Firefly Summer'. A compelling family drama that takes place in a town called Mountfern, Ireland.
+                                                Wanna know more O.O       
+                                            </small>
+                                            <br><br><br>
+                                    <a href="#" class="btn" id="play-btn"><span>Login Now</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        <!-- Discount Pop Up -->
+
+        <div id="dis-pop" class="dis-pop">
+            <div class="dis-box">
+                    <a href="#" class="dis-close"></a> 
+                <div class="disBximg">
+                    <img src="../images/Little_Marmaid.png" alt="Special-Box">
+                </div>
+                <div class="dis-box2">
+                    <div>
+                        <h3>Special Gift</h3>
+                        <h2>100<sup>%</sup><span>Off</span></h2>
+                        <p>Login and subscribe our newsletter to get a free gift</p>
+                        <a href="#" id="play-btn2">Get The Deal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- News Letter -->
+
+        <div class="box">
+            <div class="small-container">
+            <form action="#dis-pop">
+                <h2>Newsletter</h2>
+                <p>Keep our latest news and events. Subcribe our newsletter</p>
+                <br>
+                <input type="text" placeholder="Email Address...">
+        
+                <a href="#dis-pop" class="news-button">Subscirbe</a>
+                
+            </form>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+
+        <div class="footer">
+            <div class="container2">
+                <div class="row">
+                    <div class="f-col1">
+                        <a href="#"><img src="../images/O.O_Logo.png" alt="logo2"></a>
+                        <p>Our Purpose is to serve our players with unlimited FUN.
+                            Play now and explore tons of collection of our stories.</p>
+                    </div>
+                    <div class="f-col2">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="../html/index.html#feature-stories">Feature Stories</a></li> 
+                            <li><a href="../html/Reviews.html">Reviews</a></li> 
+                            <li><a href="../html/Packages.html">Our Plan</a></li> 
+                        </ul>
+                    </div>
+                    <div class="f-col2">
+                        <h3>Links</h3>
+                        <ul>
+                            <li> <a href="#"> About Us </a></li>
+                            <li> <a href="#"> Coupons    </a></li> 
+                            <li>  <a href="#"> Return Policy </a></li>  
+                        </ul>
+                    </div>
+                    <div class="f-col3">
+                        <h3>Follow us</h3>
+                        <div class="social">
+                            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="f-col2">
+                        <div class="contact-us">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-map-location-dot"></i>&nbsp;
+                                Flat36, 5 Drysdale Road, Edinburgh, Scotland, United Kingdom 
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                +44 07089768 
+                                +55 07755467
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-paper-plane"></i>&nbsp;&nbsp;OOAdv@game.com
+                            </li>
+                        </ul>
+                        </div> 
+                    </div>
+                </div>
+                <hr>
+                <p class="cpright">&copy; 2025 by O.O Adventures . All Right Reserved.</p>
+                <br>
+            </div>
+        </div>
+
+        <!-- HTML: Cookie Consent Bar -->
+        <div id="cookie-consent" class="cookie-consent">
+            <div class="cookie-content">
+                <div class="cookie-logo">
+                    <img src="../images/O.O_Logo.png" alt="O.O Adventures Logo">
+                </div>
+                <div class="cookie-text">
+                    <p><strong>This website uses cookies</strong><br>
+                        We use cookies to give you the best online experience. Please let us know if you agree to all of these cookies.</p>
+                </div>
+                <div class="cookie-settings">
+                    <label>Necessary
+                        <input type="checkbox" checked disabled>
+                        <span class="toggle-switch"></span>
+                    </label>
+                    <label>Preferences
+                        <input type="checkbox" id="preferences">
+                        <span class="toggle-switch"></span>
+                    </label>
+                    <label>Statistics
+                        <input type="checkbox" id="statistics">
+                        <span class="toggle-switch"></span>
+                    </label>
+                    <label>Marketing
+                        <input type="checkbox" id="marketing">
+                        <span class="toggle-switch"></span>
+                    </label>
+                    <a href="#" class="show-details">Show details <span>›</span></a>
+                </div>
+                <div class="cookie-buttons">
+                    <button id="allow-all" class="btn-primary">Allow all</button>
+                    <button id="allow-selection" class="btn-secondary">Allow selection</button>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

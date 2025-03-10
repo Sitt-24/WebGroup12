@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O.O Adventures</title>
+
+        <!-- link to style.css -->
+        <link rel="stylesheet" href="../Css/style.css">
+        <!-- from fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+        <!-- Google Fonts Link For Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" >
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <script defer src="../Js/main.js"></script>
+
+    </head>
+    <body>
+
+    
+        <div class="upper"> 
+            <!-- Header -->
+            <header>
+
+                <a href="../html/index.html">
+                    <img src="../images/O.O_Logo.png" alt="LOGO" class="logo" >
+                </a>
+
+                <div class="bar-btn" id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Nav Popup  -->
+
+                <div class="nav-popup nav-popup-toggle">
+                    <a href="../html/index.html">Home</a>
+                    <a href="../html/index.html#feature-stories">Feature Stories</a>
+                    <a href="../html/Reviews.html">Reviews</a>
+                    <a href="../html/Packages.html">Our Plans</a>
+                </div>
+
+                <!-- Main Nav Menu -->
+
+                <div class="nav">
+                    <div class="nav-items">
+                        <a href="../html/index.html">Home</a>
+                        <a href="../html/index.html#feature-stories">Feature Stories</a>
+                        <a href="../html/Reviews.html">Reviews</a>
+                        <a href="../html/Packages.html">Our Plans</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <img src="../images/search-icon-png-21.png" class="Find-i" id="Find-i"  alt="Find-icon">
+                    <button class="Login-popup">Login</button>
+
+                    <!-- Search Button -->
+                    <div class="Find-box1" id="Find-box1">
+                        <div class="Search-box1">
+                            <input type="text" placeholder="Type here ....">
+                            <label class="fi-icon">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- login Button -->
+            <section class="login-section">
+                <div class="login-wrapper">
+                    <span class="i-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="reg-box">
+
+                        <!-- Login Part -->
+                        <div class="f-box login">
+                            <div class="reg-title">
+                                <h2>Login</h2>
+                                <p>Please login to use the platform</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="log-btn">Login</button>
+
+                                <div class="lreg-link">
+                                    <p>Don't have an account? <a href="#" class="reg-link">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Register Part -->
+                        <div class="f-box register">
+                            <div class="reg-title">
+                                <h2>Registration</h2>
+                                <p>Please provide the following to verify
+                                    your identify</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Full Name</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox" id="show-password-checkbox">
+                                        Show Password
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="log-btn">Register</button>
+
+                                <div class="lreg-link">
+                                    <p>Already have an account ?<a href="#" class="log-link">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logmedia-opt">
+                        <a href="https://www.gmail.com">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Login with Google</span>
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+           
+            <!-- Contact and Submit Review Part -->
+
+            <div class="container5">
+
+                <div class="review-container">
+                </div>
+
+                <div class="Contact-w">
+                    <div class="Contact-i">
+                        <h1>Contact Info</h1>
+                        <h2><i class="fa-solid fa-phone"></i>Phone</h2>
+                        <p>+440797789</p>
+                        <h2><i class="fa-solid fa-envelope"></i>Email</h2>
+                        <p>OOAdv@game.com</p>
+                        <h2><i class="fa-solid fa-location-dot"></i>Address</h2>
+                        <p>Edinburgh, Scotland, United Kingdom</p>
+                        <ul>
+                            <li><a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="Contact-i">
+                        <h1 id="s-a-message">Please Send Review</h1>
+                        <form>
+                            <input type="text" placeholder="First Name" class="Contact-i-input">
+                            <input type="text" placeholder="Last Name" class="Contact-i-input">
+                            <input type="text" placeholder="Address" class="Contact-i-input">
+                            <textarea placeholder="Review" class="Contact-i-textarea"></textarea>
+                            <input type="submit" value="Submit Review" class="Contact-i-btn" id="play-btn4">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>   
+
+        <!-- Customer Reviews -->
+
+        <div class="testimon">
+            <div class="t-inner">
+                <h1>Feedbacks</h1>
+                    <div class="t-border"></div>
+
+                    <div class="t-row">
+                        <div class="t-col">
+                            <div class="testimon1">
+                                <img src="../images/Reviews/sabrina.jpg" alt="">
+                                <div class="t-name">Sabrina</div>
+                                <div class="t-stars">
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                </div>
+                                <p>
+                                    Absolutely love this game! The interactive storytelling keeps me engaged for hours.
+                                    The choices feel meaningful
+                                </p>
+                            </div>
+                        </div>
+                        <div class="t-col">
+                            <div class="testimon1">
+                                <img src="../images/Reviews/Gyehoon.jpg" alt="">
+                                <div class="t-name">Gyehoon</div>
+                                <div class="t-stars">
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-regular fa-star" style="color: #ffdc16;"></i>
+                                </div>
+                                <p>
+                                    I enjoy the storyline and characters, but sometimes the episodes feel too short.
+                                    Still, an amazing game worth playing! 
+                                </p>
+                            </div> 
+                        </div>
+                        <div class="t-col">
+                            <div class="testimon1">
+                                <img src="../images/Reviews/momo.jpg" alt="">
+                                <div class="t-name">Momo</div>
+                                <div class="t-stars">
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-regular fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-regular fa-star" style="color: #ffdc16;"></i>
+                                </div>
+                                <p>
+                                    The game is fun and visually appealing, but some of the chapters take too long to unlock. A little frustrating at times.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="t-col">
+                            <div class="testimon1">
+                                <img src="../images/Reviews/sullyoon.jpg" alt="">
+                                <div class="t-name">Sullyoon</div>
+                                <div class="t-stars">
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                </div>
+                                <p>
+                                    Best adventure game I've played! The stories are unique, and the animations bring the characters to life.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="t-col">
+                            <div class="testimon1">
+                                <img src="../images/Reviews/p3.jpg" alt="">
+                                <div class="t-name">Steph</div>
+                                <div class="t-stars">
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                </div>
+                                <p>
+                                    This game is a masterpiece! The freedom to shape my own adventure is incredible.
+                                    Every story feels like a movie I get to control!.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="t-col">
+                            <div class="testimon1">
+                                <img src="../images/Reviews/bangchan.jpg" alt="">
+                                <div class="t-name">Christopher</div>
+                                <div class="t-stars">
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-solid fa-star" style="color: #ffdc16;"></i>
+                                    <i class="fa-regular fa-star" style="color: #ffdc16;"></i>
+                                </div>
+                                <p>
+                                    Great game with immersive stories! I wish there were more free choices, but overall, a fantastic experience and love it so much!
+                                </p>
+                            </div>
+                        </div>
+                    </div>    
+            </div> 
+        </div>
+
+
+        <!-- Rate Reviews --> 
+        <div class="Review-body"> 
+            <div class="R-container">
+                <div class="R-wrapper">
+                    <p class="R-text">Please rate your experience?</p>
+                    <div class="R-emoji">
+                        <div>&#128555;</div>
+                        <div>&#128528;</div>
+                        <div>&#128522;</div>
+                        <div>&#128515;</div>
+                        <div>&#128525;</div>
+                    </div>
+                </div>
+                <a href="#" class="R-btn" id="play-btn3">Submit</a>
+            </div>
+        </div>
+
+
+        <!-- Footer Section -->
+
+        <div class="footer">
+            <div class="container2">
+                <div class="row">
+                    <div class="f-col1">
+                        <a href="#"><img src="../images/O.O_Logo.png" alt="logo2"></a>
+                        <p>Our Purpose is to serve our players with unlimited FUN.
+                            Play now and explore tons of collection of our stories.</p>
+                    </div>
+                    <div class="f-col2">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="../html/index.html#feature-stories">Feature Stories</a></li> 
+                            <li><a href="../html/Reviews.html">Reviews</a></li> 
+                            <li><a href="../html/Packages.html">Our Plan</a></li> 
+                        </ul>
+                    </div>
+                    <div class="f-col2">
+                        <h3>Links</h3>
+                        <ul>
+                            <li><a href="#"> About Us </a></li>
+                            <li><a href="#"> Coupons    </a></li> 
+                            <li><a href="#"> Return Policy </a></li>  
+                        </ul>
+                    </div>
+                    <div class="f-col3">
+                        <h3>Follow us</h3>
+                        <div class="social">
+                            <a href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.youtube.com"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="f-col2">
+                        <div class="contact-us">
+                        <h3>Contact Us</h3>
+                        <ul>
+                            <li>
+                                <i class="fa-solid fa-map-location-dot"></i>&nbsp;
+                                Flat36, 5 Drysdale Road, Edinburgh, Scotland, United Kingdom
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-phone"></i>
+                                +44 07089768
+                                +44 07755467
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-paper-plane"></i>&nbsp;&nbsp;OOAdv@game.com
+                            </li>
+                        </ul>
+                        </div> 
+                    </div>
+                </div>
+                <hr>
+                <p class="cpright">&copy; 2025 by O.O Adventures . All Right Reserved.</p>
+                <br>
+            </div>
+        </div>
+    </body>
+</html>
