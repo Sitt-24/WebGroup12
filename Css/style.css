@@ -2123,22 +2123,4 @@ input[type="checkbox"]:checked + .toggle-switch::before {
     width: 80px;
     margin-right: 70px;
   }
-  /* Remove blue underline from links */
-.nav a, .nav-popup a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Ensure images display properly */
-.logo, .Find-i {
-  display: block;
-  width: auto; /* Adjust width as needed */
-  height: auto; /* Adjust height as needed */
-}
-
-/*Add hover effect */
-.nav a:hover, .nav-popup a:hover {
-  color: #ff6600; 
-}
-
 }
