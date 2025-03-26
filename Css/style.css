@@ -632,6 +632,25 @@
 }
 
 /* Middle */
+/*Jack's section*/
+.StoryPosition{
+    position: fixed;
+    bottom: 75%;
+    right: 60%;
+    width: 30%;
+}
+.StoryPic{
+  position: fixed;
+    bottom: 50%;
+    left: 60%;
+    width: 30%;
+}
+.FeaturedALT{
+  position: fixed;
+    top: 65%;
+    width: 100%;
+}
+/*end of jacks section*/
 
 .category{
   background: var(--first-colour);
@@ -729,6 +748,11 @@ small{
   bottom: 0;
   color: #0a0a0a;
   font-size: 16px;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
 }
 .footer p{
   color: #0c0c0c;
@@ -2123,4 +2147,5 @@ input[type="checkbox"]:checked + .toggle-switch::before {
     width: 80px;
     margin-right: 70px;
   }
+  
 }
