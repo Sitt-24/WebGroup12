@@ -1,1 +1,464 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O.O Adventures</title>
+
+        <!-- link to style.css -->
+        <link rel="stylesheet" href="../Css/style.css">
+        <!-- from fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+        <!-- Google Fonts Link For Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" >
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <script defer src="../Js/main.js"></script>
+        <style>
+            body { font-family: Arial, sans-serif; background-color: #f8f3dc; padding: 20px; }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="upper"> 
+            <!-- Header -->
+            <header>
+
+                <a href="../index.html">
+                    <img src="../images/O.O_Logo.png" alt="LOGO" class="logo" >
+                </a>
+
+                <div class="bar-btn" id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Nav Popup  -->
+
+                <div class="nav-popup nav-popup-toggle">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#feature-stories">Feature Stories</a>
+                    <a href="Reviews.html">Reviews</a>
+                    <a href="Packages.html">Our Plans</a>
+                </div>
+
+                <!-- Main Nav Menu -->
+
+                <div class="nav">
+                    <div class="nav-items">
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#feature-stories">Feature Stories</a>
+                        <a href="Reviews.html">Reviews</a>
+                        <a href="Packages.html">Our Plans</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <img src="../images/search-icon-png-21.png" class="Find-i" id="Find-i"  alt="Find-icon">
+                    <button class="Login-popup">Login</button>
+
+                    <!-- Search Button -->
+                    <div class="Find-box1" id="Find-box1">
+                        <div class="Search-box1">
+                            <input type="text" placeholder="Type here ....">
+                            <label class="fi-icon">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+ 
+            <!-- login Button -->
+            <section class="login-section">
+                <div class="login-wrapper">
+                    <span class="i-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="reg-box">
+
+                        <!-- Login Part -->
+                        <div class="f-box login">
+                            <div class="reg-title">
+                                <h2>Login</h2>
+                                <p>Please login to use the platform</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="log-btn">Login</button>
+
+                                <div class="lreg-link">
+                                    <p>Don't have an account? <a href="#" class="reg-link">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Register Part -->
+                        <div class="f-box register">
+                            <div class="reg-title">
+                                <h2>Registration</h2>
+                                <p>Please provide the following to verify
+                                    your identify</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Full Name</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox" id="show-password-checkbox">
+                                        Show Password
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="log-btn">Register</button>
+
+                                <div class="lreg-link">
+                                    <p>Already have an account ?<a href="#" class="log-link">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logmedia-opt">
+                        <a href="https://www.gmail.com">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Login with Google</span>
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class = "StoryPosition">
+            <h1>Goblet of Fire</h1>
+            <div id="story" class="story"></div>
+            <div id="choices" class="choices"></div>         
+        </div>
+
+        <div class = "StoryPic2">
+           <img src = "../images/StoryCard/HP2.jpg">
+        </div>
+
+        <div class="FeaturedALT">
+            <section id="feature-stories" class="feature-stories">
+                <h2>Featured Stories</h2>
+                <div class="carousel-container">
+                    <button class="prev-btn">&#10094;</button> <!-- Left arrow -->
+                    <div class="carousel">
+                        <!-- Story Card 1 -->
+                        <div class="story-card">
+                            <a href="..\html\BeforeChristmas.html"><img src="..\images\StoryCard\christmas.jpg" alt="Before the Christmas" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Before the Christmas</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 2 -->
+                        <div class="story-card">
+                            <a href="..\html\Jack&Beanstalk.html"><img src="..\images\StoryCard\jackandbeanstalk.jpg" alt="JackAndBeanstalk" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Jack and the Beanstalk</h3>
+
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 3 -->
+                        <div class="story-card">
+                            <a href="..\html\Goldilock.html"><img src="..\images\StoryCard\GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goldilock And 3 Bears</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 4 -->
+                        <div class="story-card">
+                            <a href="..\html\HalfBloodPrince.html"><img src="..\images\StoryCard\HP1.jpg" alt="HalfBlood Prince" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>HalfBlood Prince</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 5 -->
+                        <div class="story-card">
+                            <a href="..\html\GobletOfFire.html"><img src="..\images\StoryCard\HP2.jpg" alt="Goblet of Fire" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goblet of Fire</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 6 -->
+                        <div class="story-card">
+                            <a href="..\html\LittleRedRidingHood.html"><img src="..\images\StoryCard\LRR.jpg" alt="Little Red Riding Hood" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Little Red Riding Hood</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 7 -->
+                        <div class="story-card">
+                            <a href="..\html\rapunzel.html"><img src="..\images\StoryCard\Rapunzel.jpg" alt="Rapunzel" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Rapunzel</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 8 -->
+                        <div class="story-card">
+                            <a href="..\html\WildSwans.html"><img src="..\images\StoryCard\wildswans.jpg" alt="WildSwans" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Wild Swans</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 9 -->
+                        <div class="story-card">
+                            <a href="..\html\HanselAndGretal.html"><img src="..\images\StoryCard\hanselandgretal.jpg" alt="Hansel&Gretal" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Hansel and Gretal</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next-btn">&#10095;</button> <!-- Right arrow -->
+                </div>
+                <div class="dots-container"></div> <!-- Dots for navigation -->
+            </section>
+        </div>    
+    </body>
+
+
+
+
+    <script>
+        const storyData = {
+    begin: {
+        text: "You receive a mysterious letter—your name has been entered into the Triwizard Tournament! What do you do?",
+        choices: [
+            { text: "Accept the Challenge", next: "accept_challenge" },
+        ]
+    },
+    accept_challenge: {
+        text: "You step forward as the entire school watches. The first task is approaching!",
+        choices: [
+            { text: "Prepare for the First Task", next: "prepare_first_task" },
+            { text: "Seek Help from a Professor", next: "seek_help" },
+            { text: "Train in Secret", next: "train_secret" }
+        ]
+    },
+    prepare_first_task: {
+        text: "You research dragons and practice spells. The first task arrives!",
+        choices: [
+            { text: "Use Your Wand to Distract the Dragon", next: "wand_dragon" },
+            { text: "Fly on Your Broomstick", next: "broomstick_flight" }
+        ]
+    },
+    wand_dragon: {
+        text: "You manage to distract the dragon long enough to grab the golden egg!",
+        choices: [
+            { text: "Prepare for the Second Task", next: "prepare_second_task" }
+        ]
+    },
+    broomstick_flight: {
+        text: "You soar past the dragon and snatch the egg! You barely escape its flames.",
+        choices: [
+            { text: "Prepare for the Second Task", next: "prepare_second_task" }
+        ]
+    },
+    seek_help: {
+        text: "Professor Moody gives you some unusual advice... should you trust him?",
+        choices: [
+            { text: "Follow His Advice", next: "follow_moody" },
+            { text: "Rely on Your Own Skills", next: "prepare_first_task" }
+        ]
+    },
+    follow_moody: {
+        text: "Moody’s advice helps you win the first task, but something about him seems off...",
+        choices: [
+            { text: "Investigate Moody", next: "investigate_moody" },
+            { text: "Focus on the Second Task", next: "prepare_second_task" }
+        ]
+    },
+    train_secret: {
+        text: "You secretly practice spells and strategies. When the first task comes, you perform better than expected!",
+        choices: [
+            { text: "Prepare for the Second Task", next: "prepare_second_task" }
+        ]
+    },
+    prepare_second_task: {
+        text: "You open the golden egg, revealing a clue about an underwater challenge!",
+        choices: [
+            { text: "Seek Help from the Merpeople", next: "seek_merpeople" },
+            { text: "Brew a Gillyweed Potion", next: "brew_gillyweed" }
+        ]
+    },
+    seek_merpeople: {
+        text: "The merpeople give you cryptic advice. Will you trust them?",
+        choices: [
+            { text: "Follow Their Advice", next: "underwater_success" },
+            { text: "Find Another Solution", next: "brew_gillyweed" }
+        ]
+    },
+    brew_gillyweed: {
+        text: "You manage to get your hands on Gillyweed. The second task begins!",
+        choices: [
+            { text: "Use Gillyweed and Dive In", next: "underwater_success" }
+        ]
+    },
+    underwater_success: {
+        text: "You successfully retrieve your hostage and earn high marks! The final task awaits...",
+        choices: [
+            { text: "Prepare for the Maze", next: "prepare_maze" }
+        ]
+    },
+    prepare_maze: {
+        text: "The final task is a deadly maze. How do you prepare?",
+        choices: [
+            { text: "Memorize a Map of the Maze", next: "map_maze" },
+            { text: "Learn Defensive Spells", next: "defensive_spells" }
+        ]
+    },
+    map_maze: {
+        text: "You study a map, but the maze keeps shifting! You must rely on instinct.",
+        choices: [
+            { text: "Enter the Maze", next: "enter_maze" }
+        ]
+    },
+    defensive_spells: {
+        text: "You train in defensive magic, preparing for anything inside the maze.",
+        choices: [
+            { text: "Enter the Maze", next: "enter_maze" }
+        ]
+    },
+    enter_maze: {
+        text: "Inside the maze, dangers lurk around every corner. You see a split path. Which way do you go?",
+        choices: [
+            { text: "Left Path", next: "left_path" },
+            { text: "Right Path", next: "right_path" }
+        ]
+    },
+    left_path: {
+        text: "You encounter a sphinx who offers a riddle. Solve it correctly or face the consequences!",
+        choices: [
+            { text: "Attempt the Riddle", next: "solve_riddle" },
+            { text: "Try to Sneak Past", next: "sneak_past" }
+        ]
+    },
+    solve_riddle: {
+        text: "You solve the riddle and the sphinx allows you to pass!",
+        choices: [
+            { text: "Proceed to the Cup", next: "find_cup" }
+        ]
+    },
+    sneak_past: {
+        text: "The sphinx attacks! You barely escape but lose valuable time.",
+        choices: [
+            { text: "Continue Forward", next: "find_cup" }
+        ]
+    },
+    right_path: {
+        text: "You get caught in Devil’s Snare! How do you escape?",
+        choices: [
+            { text: "Stay Calm and Use Light Magic", next: "escape_snare" },
+            { text: "Struggle and Fight It", next: "caught_snare" }
+        ]
+    },
+    escape_snare: {
+        text: "You use Lumos and free yourself! You run towards the Cup.",
+        choices: [
+            { text: "Find the Cup", next: "find_cup" }
+        ]
+    },
+    caught_snare: {
+        text: "You struggle, but the plant tightens its grip. You lose the tournament.",
+        choices: []
+    },
+    find_cup: {
+        text: "You reach the Triwizard Cup, but it’s a Portkey! You are transported to a graveyard...",
+        choices: [
+            { text: "Prepare to Fight", next: "fight_voldemort" },
+            { text: "Try to Escape", next: "escape_graveyard" }
+        ]
+    },
+    fight_voldemort: {
+        text: "You duel Voldemort! Against all odds, you manage to escape back to Hogwarts.",
+        choices: []
+    },
+    escape_graveyard: {
+        text: "You grab the Cup again and are whisked back to Hogwarts, warning everyone of Voldemort’s return.",
+        choices: []
+    }
+};
+
+
+            
+        function renderScene(sceneKey) {
+            const scene = storyData[sceneKey];
+            document.getElementById("story").innerText = scene.text;
+            const choicesDiv = document.getElementById("choices");
+            choicesDiv.innerHTML = "";
+            
+            scene.choices.forEach(choice => {
+                const button = document.createElement("button");
+                button.innerText = choice.text;
+                button.onclick = () => renderScene(choice.next);
+                choicesDiv.appendChild(button);
+            });
+        }
+        
+        renderScene("begin");
+    </script>
+
+<footer class="footer">
+    <p>&copy; 2025 O.O Adventures. All Rights Reserved.</p>
+</footer>
+</html>
+    

@@ -635,13 +635,19 @@
 /*Jack's section*/
 .StoryPosition{
     position: fixed;
-    bottom: 75%;
-    right: 60%;
+    bottom: 65%;
+    right: 55%;
     width: 30%;
 }
 .StoryPic{
   position: fixed;
-    bottom: 50%;
+    bottom: 45%;
+    left: 60%;
+    width: 30%;
+}
+.StoryPic2{
+  position: fixed;
+    bottom: 35%;
     left: 60%;
     width: 30%;
 }
