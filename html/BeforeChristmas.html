@@ -1,1 +1,428 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O.O Adventures</title>
+
+        <!-- link to style.css -->
+        <link rel="stylesheet" href="../Css/style.css">
+        <!-- from fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+        <!-- Google Fonts Link For Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" >
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <script defer src="../Js/main.js"></script>
+        <style>
+            body { font-family: Arial, sans-serif; background-color: #f8f3dc; padding: 20px; }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="upper"> 
+            <!-- Header -->
+            <header>
+
+                <a href="../index.html">
+                    <img src="../images/O.O_Logo.png" alt="LOGO" class="logo" >
+                </a>
+
+                <div class="bar-btn" id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Nav Popup  -->
+
+                <div class="nav-popup nav-popup-toggle">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#feature-stories">Feature Stories</a>
+                    <a href="Reviews.html">Reviews</a>
+                    <a href="Packages.html">Our Plans</a>
+                </div>
+
+                <!-- Main Nav Menu -->
+
+                <div class="nav">
+                    <div class="nav-items">
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#feature-stories">Feature Stories</a>
+                        <a href="Reviews.html">Reviews</a>
+                        <a href="Packages.html">Our Plans</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <img src="../images/search-icon-png-21.png" class="Find-i" id="Find-i"  alt="Find-icon">
+                    <button class="Login-popup">Login</button>
+
+                    <!-- Search Button -->
+                    <div class="Find-box1" id="Find-box1">
+                        <div class="Search-box1">
+                            <input type="text" placeholder="Type here ....">
+                            <label class="fi-icon">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+ 
+            <!-- login Button -->
+            <section class="login-section">
+                <div class="login-wrapper">
+                    <span class="i-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="reg-box">
+
+                        <!-- Login Part -->
+                        <div class="f-box login">
+                            <div class="reg-title">
+                                <h2>Login</h2>
+                                <p>Please login to use the platform</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="log-btn">Login</button>
+
+                                <div class="lreg-link">
+                                    <p>Don't have an account? <a href="#" class="reg-link">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Register Part -->
+                        <div class="f-box register">
+                            <div class="reg-title">
+                                <h2>Registration</h2>
+                                <p>Please provide the following to verify
+                                    your identify</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Full Name</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox" id="show-password-checkbox">
+                                        Show Password
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="log-btn">Register</button>
+
+                                <div class="lreg-link">
+                                    <p>Already have an account ?<a href="#" class="log-link">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logmedia-opt">
+                        <a href="https://www.gmail.com">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Login with Google</span>
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class = "StoryPosition">
+            <h1>The Night before christmas</h1>
+            <div id="story" class="story"></div>
+            <div id="choices" class="choices"></div>         
+        </div>
+
+        <div class = "StoryPic">
+           <img src = "../images/StoryCard/christmas.jpg">
+        </div>
+
+        <div class="FeaturedALT">
+            <section id="feature-stories" class="feature-stories">
+                <h2>Featured Stories</h2>
+                <div class="carousel-container">
+                    <button class="prev-btn">&#10094;</button> <!-- Left arrow -->
+                    <div class="carousel">
+                        <!-- Story Card 1 -->
+                        <div class="story-card">
+                            <a href="..\html\BeforeChristmas.html"><img src="..\images\StoryCard\christmas.jpg" alt="Before the Christmas" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Before the Christmas</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 2 -->
+                        <div class="story-card">
+                            <a href="..\html\Jack&Beanstalk.html"><img src="..\images\StoryCard\jackandbeanstalk.jpg" alt="JackAndBeanstalk" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Jack and the Beanstalk</h3>
+
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 3 -->
+                        <div class="story-card">
+                            <a href="..\html\Goldilock.html"><img src="..\images\StoryCard\GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goldilock And 3 Bears</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 4 -->
+                        <div class="story-card">
+                            <a href="..\html\HalfBloodPrince.html"><img src="..\images\StoryCard\HP1.jpg" alt="HalfBlood Prince" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>HalfBlood Prince</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 5 -->
+                        <div class="story-card">
+                            <a href="..\html\GobletOfFire.html"><img src="..\images\StoryCard\HP2.jpg" alt="Goblet of Fire" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goblet of Fire</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 6 -->
+                        <div class="story-card">
+                            <a href="..\html\LittleRedRidingHood.html"><img src="..\images\StoryCard\LRR.jpg" alt="Little Red Riding Hood" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Little Red Riding Hood</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 7 -->
+                        <div class="story-card">
+                            <a href="..\html\rapunzel.html"><img src="..\images\StoryCard\Rapunzel.jpg" alt="Rapunzel" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Rapunzel</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 8 -->
+                        <div class="story-card">
+                            <a href="..\html\WildSwans.html"><img src="..\images\StoryCard\wildswans.jpg" alt="WildSwans" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Wild Swans</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 9 -->
+                        <div class="story-card">
+                            <a href="..\html\HanselAndGretal.html"><img src="..\images\StoryCard\hanselandgretal.jpg" alt="Hansel&Gretal" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Hansel and Gretal</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next-btn">&#10095;</button> <!-- Right arrow -->
+                </div>
+                <div class="dots-container"></div> <!-- Dots for navigation -->
+            </section>
+        </div>    
+    </body>
+
+
+
+
+    <script>
+        const storyData = {
+    begin: {
+        text: "'Twas the night before Christmas, and all through the house, not a creature was stirring… except you! What do you do?",
+        choices: [
+            { text: "Investigate a Sound", next: "investigate" },
+            { text: "Go Back to Sleep", next: "sleep" },
+            { text: "Look Outside the Window", next: "look_outside" },
+            { text: "Check the Christmas Tree", next: "check_tree" }
+        ]
+    },
+    investigate: {
+        text: "You tiptoe downstairs and see a mysterious figure near the fireplace. What do you do?",
+        choices: [
+            { text: "Hide and Watch", next: "watch_santa" },
+            { text: "Approach the Figure", next: "approach_santa" },
+            { text: "Call for Help", next: "call_help" }
+        ]
+    },
+    watch_santa: {
+        text: "You hide behind the couch and watch as Santa Claus himself pulls presents from his sack. You witness Christmas magic firsthand!",
+        choices: [
+            { text: "Wait Until He Leaves", next: "santa_leaves" },
+            { text: "Sneak Closer", next: "sneak_closer" }
+        ]
+    },
+    sneak_closer: {
+        text: "You try to get closer, but you accidentally knock over an ornament! Santa turns and smiles, inviting you to chat.",
+        choices: [
+            { text: "Talk to Santa", next: "talk_santa" },
+            { text: "Run Away", next: "run_away" }
+        ]
+    },
+    talk_santa: {
+        text: "Santa tells you about the magic of Christmas and lets you help him deliver presents!",
+        choices: []
+    },
+    run_away: {
+        text: "You run back upstairs, heart pounding. The next morning, you wake up to a stocking full of gifts!",
+        choices: []
+    },
+    santa_leaves: {
+        text: "You wait until Santa leaves, then check the presents under the tree. Everything is perfect!",
+        choices: []
+    },
+    approach_santa: {
+        text: "You step forward and Santa smiles warmly. He invites you for a ride in his sleigh. Do you accept?",
+        choices: [
+            { text: "Yes! Fly with Santa!", next: "fly_santa" },
+            { text: "Politely Decline and Return to Bed", next: "sleep" }
+        ]
+    },
+    fly_santa: {
+        text: "You soar through the night sky, delivering presents and seeing the world from above. You have the best Christmas ever!",
+        choices: []
+    },
+    call_help: {
+        text: "You scream for help! Your parents rush in, but by then, Santa is gone, leaving only a pile of presents behind.",
+        choices: []
+    },
+    sleep: {
+        text: "You decide it's best to stay in bed. In the morning, you wake up to a magical Christmas surprise!",
+        choices: []
+    },
+    look_outside: {
+        text: "You peek outside and see a sleigh parked on your roof! What do you do?",
+        choices: [
+            { text: "Climb onto the Roof", next: "roof" },
+            { text: "Stay Inside and Watch", next: "watch_roof" }
+        ]
+    },
+    roof: {
+        text: "You carefully climb onto the roof and see reindeer waiting patiently. Suddenly, an elf appears!",
+        choices: [
+            { text: "Talk to the Elf", next: "talk_elf" },
+            { text: "Try to Ride a Reindeer", next: "ride_reindeer" }
+        ]
+    },
+    talk_elf: {
+        text: "The elf introduces himself as Jingle and invites you to the North Pole!",
+        choices: [
+            { text: "Go with Jingle", next: "north_pole" },
+            { text: "Thank Him and Go Back Inside", next: "sleep" }
+        ]
+    },
+    ride_reindeer: {
+        text: "You hop onto a reindeer, and it takes off! You go on an unexpected adventure before Santa gently guides you back home.",
+        choices: []
+    },
+    north_pole: {
+        text: "You travel to the North Pole and see Santa’s workshop! You get to help make toys and prepare for Christmas.",
+        choices: []
+    },
+    watch_roof: {
+        text: "You stay inside and watch in amazement as Santa steps from his sleigh. You have proof that he's real!",
+        choices: []
+    },
+    check_tree: {
+        text: "You go to the Christmas tree and notice a mysterious gift with your name on it! What do you do?",
+        choices: [
+            { text: "Open the Gift", next: "open_gift" },
+            { text: "Wait Until Morning", next: "wait_morning" }
+        ]
+    },
+    open_gift: {
+        text: "You open the gift and find a magical snow globe that transports you to a winter wonderland!",
+        choices: [
+            { text: "Explore the Wonderland", next: "explore_wonderland" },
+            { text: "Try to Return Home", next: "return_home" }
+        ]
+    },
+    explore_wonderland: {
+        text: "You meet enchanted creatures and have an incredible winter adventure!",
+        choices: []
+    },
+    return_home: {
+        text: "You shake the snow globe and find yourself back home, unsure if it was real or just a dream.",
+        choices: []
+    },
+    wait_morning: {
+        text: "You decide to wait until morning. When you open the gift then, it’s a wonderful surprise!",
+        choices: []
+    }
+};
+
+            
+        function renderScene(sceneKey) {
+            const scene = storyData[sceneKey];
+            document.getElementById("story").innerText = scene.text;
+            const choicesDiv = document.getElementById("choices");
+            choicesDiv.innerHTML = "";
+            
+            scene.choices.forEach(choice => {
+                const button = document.createElement("button");
+                button.innerText = choice.text;
+                button.onclick = () => renderScene(choice.next);
+                choicesDiv.appendChild(button);
+            });
+        }
+        
+        renderScene("begin");
+    </script>
+
+<footer class="footer">
+    <p>&copy; 2025 O.O Adventures. All Rights Reserved.</p>
+</footer>
+</html>
+    

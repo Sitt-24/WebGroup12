@@ -214,7 +214,7 @@
             
                         <!-- Story Card 3 -->
                         <div class="story-card">
-                            <a href="..\html\HanselAndGretal.html"><img src="..\images\StoryCard\GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image"></a>
+                            <a href="..\html\Goldilock.html"><img src="..\images\StoryCard\GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image"></a>
                             <div class="story-info">
                                 <h3>Goldilock And 3 Bears</h3>
                             </div>
@@ -280,61 +280,122 @@
 
     <script>
         const storyData = {
-            begin:{ 
-                text: "would you like to begin your journey?",
-                choices: [
-                    { text: "start", next: "start"}
-                ]
-            },
-            start: {
-                text: "You find yourself at the base of a gigantic beanstalk stretching into the clouds. What do you do?",
-                choices: [
-                    { text: "Climb the Beanstalk", next: "climb" },
-                    { text: "Cut it Down", next: "cut" },
-                    { text: "Wait Until Nightfall", next: "wait" },
-                    { text: "Sell the Beanstalk", next: "sell" }
-                ]
-            },
-            climb: {
-                text: "You climb the beanstalk and reach the sky kingdom. What do you do next?",
-                choices: [
-                    { text: "Enter the Castle", next: "castle" },
-                    { text: "Explore the Skyland", next: "skyland" },
-                    { text: "Steal Some Gold", next: "steal_gold" },
-                    { text: "Climb Down Quickly", next: "climb_down" }
-                ]
-            },
-            castle: {
-                text: "You enter the giant's castle. You see treasures all around.",
-                choices: [
-                    { text: "Take the Gold and Run", next: "gold_escape" },
-                    { text: "Try to Befriend the Giant", next: "friend_giant" }
-                ]
-            },
-            gold_escape: {
-                text: "You grab as much gold as you can and rush down the beanstalk. The giant wakes up, but you chop down the stalk just in time! You live the rest of your life in luxury.",
-                choices: []
-            },
-            friend_giant: {
-                text: "Instead of stealing, you introduce yourself to the giant. Surprisingly, he enjoys your company and shares his wealth with you. You become friends and live in the sky kingdom.",
-                choices: []
-            },
-            cut: {
-                text: "You take an axe and start chopping down the beanstalk. Suddenly, a giant hand emerges from the clouds!",
-                choices: [
-                    { text: "Run Away", next: "run_away" },
-                    { text: "Confront the Giant", next: "confront_giant" }
-                ]
-            },
-            run_away: {
-                text: "You flee as fast as you can, escaping the giant's wrath. The beanstalk collapses behind you, cutting off the sky kingdom forever.",
-                choices: []
-            },
-            confront_giant: {
-                text: "You stand your ground as the giant descends. He sees your bravery and decides to make peace with you. You become a hero in both lands.",
-                choices: []
-            }
-        };
+    begin: { 
+        text: "Would you like to begin your journey?",
+        choices: [
+            { text: "go for a walk", next: "start" }
+        ]
+    },
+    start: {
+        text: "You find yourself at the base of a gigantic beanstalk stretching into the clouds. What do you do?",
+        choices: [
+            { text: "Climb the Beanstalk", next: "climb" },
+            { text: "Cut it Down", next: "cut" },
+            { text: "Wait Until Nightfall", next: "wait" },
+            { text: "Sell the Beanstalk", next: "sell" }
+        ]
+    },
+    climb: {
+        text: "You climb the beanstalk and reach the sky kingdom. What do you do next?",
+        choices: [
+            { text: "Enter the Castle", next: "castle" },
+            { text: "Explore the Skyland", next: "skyland" },
+            { text: "Steal Some Gold", next: "steal_gold" },
+            { text: "Climb Down Quickly", next: "climb_down" }
+        ]
+    },
+    castle: {
+        text: "You enter the giant's castle. You see treasures all around.",
+        choices: [
+            { text: "Take the Gold and Run", next: "gold_escape" },
+            { text: "Try to Befriend the Giant", next: "friend_giant" }
+        ]
+    },
+    gold_escape: {
+        text: "You grab as much gold as you can and rush down the beanstalk. The giant wakes up, but you chop down the stalk just in time! You live the rest of your life in luxury.",
+        choices: []
+    },
+    friend_giant: {
+        text: "Instead of stealing, you introduce yourself to the giant. Surprisingly, he enjoys your company and shares his wealth with you. You become friends and live in the sky kingdom, helping the giant govern his land.",
+        choices: []
+    },
+    skyland: {
+        text: "You explore the skyland and discover a hidden village of friendly cloud people. They welcome you and offer you a place to stay.",
+        choices: [
+            { text: "Stay and Live Among Them", next: "live_clouds" },
+            { text: "Return Home with Stories", next: "return_home" }
+        ]
+    },
+    live_clouds: {
+        text: "You decide to stay and live among the cloud people, learning their ways and eventually becoming one of their leaders.",
+        choices: []
+    },
+    return_home: {
+        text: "You return home with fantastic tales of the sky kingdom. People doubt your stories, but you know the truth.",
+        choices: []
+    },
+    steal_gold: {
+        text: "You sneak into the giant’s castle and take some gold, but he wakes up!",
+        choices: [
+            { text: "Run Away", next: "gold_escape" },
+            { text: "Try to Fight the Giant", next: "fight_giant" }
+        ]
+    },
+    fight_giant: {
+        text: "You bravely stand your ground, but the giant is too strong. You are captured and made to work as his servant forever.",
+        choices: []
+    },
+    climb_down: {
+        text: "Fearful of what might be above, you climb down and leave the beanstalk alone. You never know what mysteries remain hidden in the clouds.",
+        choices: []
+    },
+    cut: {
+        text: "You take an axe and start chopping down the beanstalk. Suddenly, a giant hand emerges from the clouds!",
+        choices: [
+            { text: "Run Away", next: "run_away" },
+            { text: "Confront the Giant", next: "confront_giant" }
+        ]
+    },
+    run_away: {
+        text: "You flee as fast as you can, escaping the giant’s wrath. The beanstalk collapses behind you, cutting off the sky kingdom forever.",
+        choices: []
+    },
+    confront_giant: {
+        text: "You stand your ground as the giant descends. He sees your bravery and decides to make peace with you. You become a hero in both lands.",
+        choices: []
+    },
+    wait: {
+        text: "You wait until nightfall. The beanstalk glows with magical energy, revealing a secret portal at its base.",
+        choices: [
+            { text: "Enter the Portal", next: "portal" },
+            { text: "Ignore It and Sleep", next: "sleep" }
+        ]
+    },
+    portal: {
+        text: "You step into the portal and find yourself in another dimension where everything is upside down! You are now an adventurer in a strange new world.",
+        choices: []
+    },
+    sleep: {
+        text: "You sleep at the base of the beanstalk. In the morning, it's gone. Was it all a dream?",
+        choices: []
+    },
+    sell: {
+        text: "You decide to sell the beanstalk to the highest bidder. A mysterious traveler buys it and disappears into the clouds.",
+        choices: [
+            { text: "Track Him Down", next: "track_traveler" },
+            { text: "Enjoy Your Fortune", next: "fortune" }
+        ]
+    },
+    track_traveler: {
+        text: "You regret selling the beanstalk and track down the traveler. He reveals himself as a sky wizard who rewards your curiosity with magical powers!",
+        choices: []
+    },
+    fortune: {
+        text: "You enjoy your newfound fortune but always wonder what lay beyond the clouds.",
+        choices: []
+    }
+};
+
             
         function renderScene(sceneKey) {
             const scene = storyData[sceneKey];
