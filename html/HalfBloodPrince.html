@@ -1,1 +1,461 @@
-test
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O.O Adventures</title>
+
+        <!-- link to style.css -->
+        <link rel="stylesheet" href="../Css/style.css">
+        <!-- from fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+        <!-- Google Fonts Link For Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" >
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <script defer src="../Js/main.js"></script>
+        <style>
+            body { font-family: Arial, sans-serif; background-color: #f8f3dc; padding: 20px; }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="upper"> 
+            <!-- Header -->
+            <header>
+
+                <a href="../index.html">
+                    <img src="../images/O.O_Logo.png" alt="LOGO" class="logo" >
+                </a>
+
+                <div class="bar-btn" id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Nav Popup  -->
+
+                <div class="nav-popup nav-popup-toggle">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#feature-stories">Feature Stories</a>
+                    <a href="Reviews.html">Reviews</a>
+                    <a href="Packages.html">Our Plans</a>
+                </div>
+
+                <!-- Main Nav Menu -->
+
+                <div class="nav">
+                    <div class="nav-items">
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#feature-stories">Feature Stories</a>
+                        <a href="Reviews.html">Reviews</a>
+                        <a href="Packages.html">Our Plans</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <img src="../images/search-icon-png-21.png" class="Find-i" id="Find-i"  alt="Find-icon">
+                    <button class="Login-popup">Login</button>
+
+                    <!-- Search Button -->
+                    <div class="Find-box1" id="Find-box1">
+                        <div class="Search-box1">
+                            <input type="text" placeholder="Type here ....">
+                            <label class="fi-icon">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+ 
+            <!-- login Button -->
+            <section class="login-section">
+                <div class="login-wrapper">
+                    <span class="i-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="reg-box">
+
+                        <!-- Login Part -->
+                        <div class="f-box login">
+                            <div class="reg-title">
+                                <h2>Login</h2>
+                                <p>Please login to use the platform</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="log-btn">Login</button>
+
+                                <div class="lreg-link">
+                                    <p>Don't have an account? <a href="#" class="reg-link">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Register Part -->
+                        <div class="f-box register">
+                            <div class="reg-title">
+                                <h2>Registration</h2>
+                                <p>Please provide the following to verify
+                                    your identify</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Full Name</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox" id="show-password-checkbox">
+                                        Show Password
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="log-btn">Register</button>
+
+                                <div class="lreg-link">
+                                    <p>Already have an account ?<a href="#" class="log-link">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logmedia-opt">
+                        <a href="https://www.gmail.com">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Login with Google</span>
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class = "StoryPosition">
+            <h1>HalfBlood Prince</h1>
+            <div id="story" class="story"></div>
+            <div id="choices" class="choices"></div>         
+        </div>
+
+        <div class = "StoryPic2">
+           <img src = "../images/StoryCard/HP1.jpg">
+        </div>
+
+        <div class="FeaturedALT">
+            <section id="feature-stories" class="feature-stories">
+                <h2>Featured Stories</h2>
+                <div class="carousel-container">
+                    <button class="prev-btn">&#10094;</button> <!-- Left arrow -->
+                    <div class="carousel">
+                        <!-- Story Card 1 -->
+                        <div class="story-card">
+                            <a href="..\html\BeforeChristmas.html"><img src="..\images\StoryCard\christmas.jpg" alt="Before the Christmas" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Before the Christmas</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 2 -->
+                        <div class="story-card">
+                            <a href="..\html\Jack&Beanstalk.html"><img src="..\images\StoryCard\jackandbeanstalk.jpg" alt="JackAndBeanstalk" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Jack and the Beanstalk</h3>
+
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 3 -->
+                        <div class="story-card">
+                            <a href="..\html\Goldilock.html"><img src="..\images\StoryCard\GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goldilock And 3 Bears</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 4 -->
+                        <div class="story-card">
+                            <a href="..\html\HalfBloodPrince.html"><img src="..\images\StoryCard\HP1.jpg" alt="HalfBlood Prince" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>HalfBlood Prince</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 5 -->
+                        <div class="story-card">
+                            <a href="..\html\GobletOfFire.html"><img src="..\images\StoryCard\HP2.jpg" alt="Goblet of Fire" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goblet of Fire</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 6 -->
+                        <div class="story-card">
+                            <a href="..\html\LittleRedRidingHood.html"><img src="..\images\StoryCard\LRR.jpg" alt="Little Red Riding Hood" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Little Red Riding Hood</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 7 -->
+                        <div class="story-card">
+                            <a href="..\html\rapunzel.html"><img src="..\images\StoryCard\Rapunzel.jpg" alt="Rapunzel" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Rapunzel</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 8 -->
+                        <div class="story-card">
+                            <a href="..\html\WildSwans.html"><img src="..\images\StoryCard\wildswans.jpg" alt="WildSwans" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Wild Swans</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 9 -->
+                        <div class="story-card">
+                            <a href="..\html\HanselAndGretal.html"><img src="..\images\StoryCard\hanselandgretal.jpg" alt="Hansel&Gretal" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Hansel and Gretal</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next-btn">&#10095;</button> <!-- Right arrow -->
+                </div>
+                <div class="dots-container"></div> <!-- Dots for navigation -->
+            </section>
+        </div>    
+    </body>
+
+
+
+
+    <script>
+        const storyData = {
+    begin: {
+        text: "You find a mysterious old Potions book labeled 'This book is the property of the Half-Blood Prince.' What do you do?",
+        choices: [
+            { text: "Use the book for your studies", next: "use_book" },
+            { text: "Tell hermione that you found it", next: "tell_hermione" }
+        ]
+    },
+    use_book: {
+        text: "The book's handwritten notes help you excel at Potions class. Snape is suspicious.",
+        choices: [
+            { text: "Keep using the book in secret", next: "keep_using" },
+            { text: "Try to learn more about the Half Blood Prince", next: "investigate_prince" }
+        ]
+    },
+    tell_hermione: {
+        text: "Hermione disapproves and warns you it could be dangerous. Do you listen?",
+        choices: [
+            { text: "Stop using the book", next: "stop_using" },
+            { text: "Use it anyway", next: "keep_using" }
+        ]
+    },
+    keep_using: {
+        text: "You find a spell labeled 'Sectumsempra'. You are tempted to try it even though you do not know what it does. What do you do?",
+        choices: [
+            { text: "Try it", next: "try_spell" },
+            { text: "Avoid it", next: "avoid_spell" }
+        ]
+    },
+    investigate_prince: {
+        text: "You search for clues about the Half-Blood Prince. The trail leads to the library.",
+        choices: [
+            { text: "Dig restricted section", next: "find_clue" },
+            { text: "Ask Slughorn for help", next: "ask_slughorn" }
+        ]
+    },
+    stop_using: {
+        text: "Without the book, your grades drop, but you feel safer. Meanwhile, Dumbledore wants to show you a memory.",
+        choices: [
+            { text: "Go with Dumbledore", next: "visit_memory" }
+        ]
+    },
+    try_spell: {
+        text: "You use Sectumsempra on Malfoy during a duel and nearly kill him",
+        choices: [
+            { text: "confess to the using the book", next: "confess" },
+            { text: "Hide the book", next: "hide_book" }
+        ]
+    },
+    avoid_spell: {
+        text: "You choose not to use the spell. The book still offers useful advice.",
+        choices: [
+            { text: "Keep using the book safely", next: "use_carefully" }
+        ]
+    },
+    use_carefully: {
+        text: "You excel in class but remain cautious. Dumbledore asks you to join him on an important mission.",
+        choices: [
+            { text: "Agree to go with dumbledore", next: "visit_memory" }
+        ]
+    },
+    hide_book: {
+        text: "You hide the book in the Room of Requirement. Snape questions if you have been using any extra materials.",
+        choices: [
+            { text: "Lie to Snape", next: "snape_suspicious" },
+            { text: "Tell the truth about the book", next: "snape_reaction" }
+        ]
+    },
+    confess: {
+        text: "You admit what you did. Snape takes 100 points from your house.",
+        choices: []
+    },
+    snape_suspicious: {
+        text: "Snape grows more suspicious of you. Meanwhile, Dumbledore shows you a critical memory about Voldemort.",
+        choices: [
+            { text: "Go with Dumbledore", next: "visit_memory" }
+        ]
+    },
+    snape_reaction: {
+        text: "Snape is furious but intrigued by the book. He warns you to stay out of trouble",
+        choices: [
+            { text: "Stay out of trouble", next: "visit_memory" }
+        ]
+    },
+    find_clue: {
+        text: "You discover a clue linking the Prince to Snape himself!",
+        choices: [
+            { text: "Confront Snape", next: "confront_snape" },
+            { text: "Keep it a secret", next: "keep_secret" }
+        ]
+    },
+    ask_slughorn: {
+        text: "Slughorn dodges your questions but reveals a memory Dumbledore wants. Will you get it from him?",
+        choices: [
+            { text: "Persuade Slughorn", next: "get_memory" },
+            { text: "Ignore it - it does not make sense", next: "ignore_memory" }
+        ]
+    },
+    visit_memory: {
+        text: "You and Dumbledore explore a memory showing how Voldemort created Horcruxes.",
+        choices: [
+            { text: "Help Dumbledore with Horcruxes", next: "horcrux_mission" }
+        ]
+    },
+    confront_snape: {
+        text: "Snape admits he is the Half-Blood Prince and warns you not to trust everything in that book.",
+        choices: [
+            { text: "listen to his warning", next: "visit_memory" },
+            { text: "Ignore his warning", next: "keep_using" }
+        ]
+    },
+    keep_secret: {
+        text: "You keep your discovery to yourself, focusing on helping Dumbledore with Horcruxes.",
+        choices: [
+            { text: "Join Dumbledore", next: "horcrux_mission" }
+        ]
+    },
+    get_memory: {
+        text: "You persuade Slughorn to give the memory to Dumbledore. You figure out that Voldemort made multiple Horcruxes.",
+        choices: [
+            { text: "Help destroy them", next: "horcrux_mission" }
+        ]
+    },
+    ignore_memory: {
+        text: "Without the memory, you lack crucial knowledge. Dumbledore is disappointed.",
+        choices: []
+    },
+    horcrux_mission: {
+        text: "You travel with Dumbledore to a hidden cave. But the Horcrux is guarded and you do not know if you can get past.",
+        choices: [
+            { text: "Retrieve the horcrux", next: "retrieve_horcrux" }
+        ]
+    },
+    retrieve_horcrux: {
+        text: "You help Dumbledore retrieve the Horcrux, but he weak after the magic in the cave.",
+        choices: [
+            { text: "Return to hogwarts", next: "return_hogwarts" }
+        ]
+    },
+    return_hogwarts: {
+        text: "Back at the tower, Death Eaters attack. Draco tries, but Snape kills Dumbledore.",
+        choices: [
+            { text: "Fight back", next: "fight_back" },
+            { text: "stay silent", next: "grieve" }
+        ]
+    },
+    fight_back: {
+        text: "You vow to find and destroy the Horcruxes.",
+        choices: []
+    },
+    grieve: {
+        text: "You mourn Dumbledore’s loss.",
+        choices: []
+    }
+};
+
+
+            
+        function renderScene(sceneKey) {
+            const scene = storyData[sceneKey];
+            document.getElementById("story").innerText = scene.text;
+            const choicesDiv = document.getElementById("choices");
+            choicesDiv.innerHTML = "";
+            
+            scene.choices.forEach(choice => {
+                const button = document.createElement("button");
+                button.innerText = choice.text;
+                button.onclick = () => renderScene(choice.next);
+                choicesDiv.appendChild(button);
+            });
+        }
+        
+        renderScene("begin");
+    </script>
+
+<footer class="footer">
+    <p>&copy; 2025 O.O Adventures. All Rights Reserved.</p>
+</footer>
+</html>
+    
