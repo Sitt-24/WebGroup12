@@ -1,1 +1,382 @@
-test
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O.O Adventures</title>
+
+        <!-- link to style.css -->
+        <link rel="stylesheet" href="../Css/style.css">
+        <!-- from fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+        <!-- Google Fonts Link For Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" >
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <script defer src="../Js/main.js"></script>
+        <style>
+            body { font-family: Arial, sans-serif; background-color: #f8f3dc; padding: 20px; }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="upper"> 
+            <!-- Header -->
+            <header>
+
+                <a href="../index.html">
+                    <img src="../images/O.O_Logo.png" alt="LOGO" class="logo" >
+                </a>
+
+                <div class="bar-btn" id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Nav Popup  -->
+
+                <div class="nav-popup nav-popup-toggle">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#feature-stories">Feature Stories</a>
+                    <a href="Reviews.html">Reviews</a>
+                    <a href="Packages.html">Our Plans</a>
+                </div>
+
+                <!-- Main Nav Menu -->
+
+                <div class="nav">
+                    <div class="nav-items">
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#feature-stories">Feature Stories</a>
+                        <a href="Reviews.html">Reviews</a>
+                        <a href="Packages.html">Our Plans</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <img src="../images/search-icon-png-21.png" class="Find-i" id="Find-i"  alt="Find-icon">
+                    <button class="Login-popup">Login</button>
+
+                    <!-- Search Button -->
+                    <div class="Find-box1" id="Find-box1">
+                        <div class="Search-box1">
+                            <input type="text" placeholder="Type here ....">
+                            <label class="fi-icon">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+ 
+            <!-- login Button -->
+            <section class="login-section">
+                <div class="login-wrapper">
+                    <span class="i-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="reg-box">
+
+                        <!-- Login Part -->
+                        <div class="f-box login">
+                            <div class="reg-title">
+                                <h2>Login</h2>
+                                <p>Please login to use the platform</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="log-btn">Login</button>
+
+                                <div class="lreg-link">
+                                    <p>Don't have an account? <a href="#" class="reg-link">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Register Part -->
+                        <div class="f-box register">
+                            <div class="reg-title">
+                                <h2>Registration</h2>
+                                <p>Please provide the following to verify
+                                    your identify</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Full Name</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox" id="show-password-checkbox">
+                                        Show Password
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="log-btn">Register</button>
+
+                                <div class="lreg-link">
+                                    <p>Already have an account ?<a href="#" class="log-link">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logmedia-opt">
+                        <a href="https://www.gmail.com">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Login with Google</span>
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class = "StoryPosition">
+            <h1>Hansel and Gretal</h1>
+            <div id="story" class="story"></div>
+            <div id="choices" class="choices"></div>         
+        </div>
+
+        <div class = "StoryPic2">
+           <img src = "../images/StoryCard/hanselandgretal.jpg">
+        </div>
+
+        <div class="FeaturedALT">
+            <section id="feature-stories" class="feature-stories">
+                <h2>Featured Stories</h2>
+                <div class="carousel-container">
+                    <button class="prev-btn">&#10094;</button> <!-- Left arrow -->
+                    <div class="carousel">
+                        <!-- Story Card 1 -->
+                        <div class="story-card">
+                            <a href="..\html\BeforeChristmas.html"><img src="..\images\StoryCard\christmas.jpg" alt="Before the Christmas" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Before the Christmas</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 2 -->
+                        <div class="story-card">
+                            <a href="..\html\Jack&Beanstalk.html"><img src="..\images\StoryCard\jackandbeanstalk.jpg" alt="JackAndBeanstalk" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Jack and the Beanstalk</h3>
+
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 3 -->
+                        <div class="story-card">
+                            <a href="..\html\Goldilock.html"><img src="..\images\StoryCard\GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goldilock And 3 Bears</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 4 -->
+                        <div class="story-card">
+                            <a href="..\html\HalfBloodPrince.html"><img src="..\images\StoryCard\HP1.jpg" alt="HalfBlood Prince" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>HalfBlood Prince</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 5 -->
+                        <div class="story-card">
+                            <a href="..\html\GobletOfFire.html"><img src="..\images\StoryCard\HP2.jpg" alt="Goblet of Fire" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goblet of Fire</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 6 -->
+                        <div class="story-card">
+                            <a href="..\html\LittleRedRidingHood.html"><img src="..\images\StoryCard\LRR.jpg" alt="Little Red Riding Hood" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Little Red Riding Hood</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 7 -->
+                        <div class="story-card">
+                            <a href="..\html\rapunzel.html"><img src="..\images\StoryCard\Rapunzel.jpg" alt="Rapunzel" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Rapunzel</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 8 -->
+                        <div class="story-card">
+                            <a href="..\html\WildSwans.html"><img src="..\images\StoryCard\wildswans.jpg" alt="WildSwans" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Wild Swans</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 9 -->
+                        <div class="story-card">
+                            <a href="..\html\HanselAndGretal.html"><img src="..\images\StoryCard\hanselandgretal.jpg" alt="Hansel&Gretal" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Hansel and Gretal</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next-btn">&#10095;</button> <!-- Right arrow -->
+                </div>
+                <div class="dots-container"></div> <!-- Dots for navigation -->
+            </section>
+        </div>    
+    </body>
+
+
+
+
+    <script>
+        const storyData = {
+    start: {
+        text: "Hansel and Gretel are abandoned in the forest by their stepmother. They wander until they find a peculiar house made entirely of candy.",
+        choices: [
+            { text: "Eat the candy", next: "candyHouse" },
+            { text: "Walk around the house cautiously", next: "circleHouse" }
+        ]
+    },
+    candyHouse: {
+        text: "They nibble on the sugary walls. Suddenly, an old woman appears and invites them inside, offering warmth and food.",
+        choices: [
+            { text: "Accept her offer and go inside", next: "goInside" },
+            { text: "Politely refuse and run away", next: "runAway" }
+        ]
+    },
+    circleHouse: {
+        text: "They walk around the house and notice odd footprints and bones. It's creepy. The door creaks open on its own.",
+        choices: [
+            { text: "Enter the house carefully", next: "goInside" },
+            { text: "Hide in the bushes to watch", next: "hideAndWatch" }
+        ]
+    },
+    goInside: {
+        text: "Inside, the woman feeds them and prepares soft beds. But at night, she cages Hansel and tells Gretel to fatten him up!",
+        choices: [
+            { text: "Gretel pretends to obey while planning", next: "trickWitch" },
+            { text: "Gretel cries and does nothing", next: "noPlan" }
+        ]
+    },
+    runAway: {
+        text: "They flee into the woods but lose their sense of direction. It's getting cold and dark.",
+        choices: [
+            { text: "Climb a tree to look for light", next: "seeLight" },
+            { text: "Keep walking", next: "lostDeeper" }
+        ]
+    },
+    hideAndWatch: {
+        text: "They watch as the woman drags something into the house. A scream echoes. Spooked, they back away silently.",
+        choices: [
+            { text: "Sneak away immediately", next: "forestEscape" },
+            { text: "Wait longer to learn more", next: "caughtWatching" }
+        ]
+    },
+    trickWitch: {
+        text: "Gretel tricks the witch by using a bone instead of Hansel’s finger. When the witch prepares the oven, Gretel pushes her in!",
+        choices: [
+            { text: "Free Hansel and explore the house", next: "findTreasure" },
+            { text: "Just escape right away", next: "forestEscape" }
+        ]
+    },
+    noPlan: {
+        text: "Without a plan, time runs out. The witch eats Hansel, then turns to Gretel next. A tragic end.",
+        choices: []
+    },
+    seeLight: {
+        text: "Hansel sees a flicker of light and leads Gretel toward it. They find a small cabin where a kind herbalist shelters them.",
+        choices: []
+    },
+    lostDeeper: {
+        text: "They wander until they are too weak to continue. The forest swallows them whole.",
+        choices: []
+    },
+    forestEscape: {
+        text: "They race through the forest and eventually find a path leading home. Their father weeps with joy upon their return.",
+        choices: []
+    },
+    caughtWatching: {
+        text: "The witch senses them outside and drags them in. Their spying has sealed their fate.",
+        choices: []
+    },
+    findTreasure: {
+        text: "Inside the house, they find gold and jewels. They carry what they can and return home, changing their fate forever.",
+        choices: []
+    }
+};
+
+
+            
+        function renderScene(sceneKey) {
+            const scene = storyData[sceneKey];
+            document.getElementById("story").innerText = scene.text;
+            const choicesDiv = document.getElementById("choices");
+            choicesDiv.innerHTML = "";
+            
+            scene.choices.forEach(choice => {
+                const button = document.createElement("button");
+                button.innerText = choice.text;
+                button.onclick = () => renderScene(choice.next);
+                choicesDiv.appendChild(button);
+            });
+        }
+        
+        renderScene("begin");
+    </script>
+
+<footer class="footer">
+    <p>&copy; 2025 O.O Adventures. All Rights Reserved.</p>
+</footer>
+</html>
+    
