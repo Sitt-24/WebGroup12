@@ -181,7 +181,7 @@
             </section>
         </div>
         <div class = "StoryPosition">
-            <h1>Hansel and Gretal</h1>
+            <h1>Hansel And Gretal</h1>
             <div id="story" class="story"></div>
             <div id="choices" class="choices"></div>         
         </div>
@@ -280,100 +280,160 @@
 
 
     <script>
-        const storyData = {
-    start: {
-        text: "Hansel and Gretel are abandoned in the forest by their stepmother. They wander until they find a peculiar house made entirely of candy.",
+    const storyData = {
+    begin: {
+        text: "You and your sibling Gretel are lost in a deep, dark forest. As night falls, you see a strange house made entirely of candy. What do you do?",
         choices: [
-            { text: "Eat the candy", next: "candyHouse" },
-            { text: "Walk around the house cautiously", next: "circleHouse" }
+            { text: "Approach the House", next: "approach_house" },
         ]
     },
-    candyHouse: {
-        text: "They nibble on the sugary walls. Suddenly, an old woman appears and invites them inside, offering warmth and food.",
+    approach_house: {
+        text: "You walk up to the candy house. It smells amazing. A voice invites you in...",
         choices: [
-            { text: "Accept her offer and go inside", next: "goInside" },
-            { text: "Politely refuse and run away", next: "runAway" }
+            { text: "Go Inside", next: "go_inside" },
+            { text: "Peek Through the Window", next: "peek_window" },
+            { text: "Run Away", next: "run_away" }
         ]
     },
-    circleHouse: {
-        text: "They walk around the house and notice odd footprints and bones. It's creepy. The door creaks open on its own.",
+    go_inside: {
+        text: "An old woman greets you with a smile and offers food. Gretel is suspicious.",
         choices: [
-            { text: "Enter the house carefully", next: "goInside" },
-            { text: "Hide in the bushes to watch", next: "hideAndWatch" }
+            { text: "Accept the Food", next: "accept_food" },
+            { text: "Refuse and Explore the House", next: "explore_house" }
         ]
     },
-    goInside: {
-        text: "Inside, the woman feeds them and prepares soft beds. But at night, she cages Hansel and tells Gretel to fatten him up!",
+    peek_window: {
+        text: "You see a cozy room with a large oven... and cages. That’s suspicious.",
         choices: [
-            { text: "Gretel pretends to obey while planning", next: "trickWitch" },
-            { text: "Gretel cries and does nothing", next: "noPlan" }
+            { text: "Warn Gretel and Leave", next: "run_away" },
+            { text: "Go Inside Anyway", next: "go_inside" }
         ]
     },
-    runAway: {
-        text: "They flee into the woods but lose their sense of direction. It's getting cold and dark.",
+    run_away: {
+        text: "You escape the house but are still lost in the woods.",
         choices: [
-            { text: "Climb a tree to look for light", next: "seeLight" },
-            { text: "Keep walking", next: "lostDeeper" }
+            { text: "Climb a Tree to Look Around", next: "climb_tree" }
         ]
     },
-    hideAndWatch: {
-        text: "They watch as the woman drags something into the house. A scream echoes. Spooked, they back away silently.",
+    accept_food: {
+        text: "You fall asleep after eating, but wake up in a cage! The witch plans to fatten you up.",
         choices: [
-            { text: "Sneak away immediately", next: "forestEscape" },
-            { text: "Wait longer to learn more", next: "caughtWatching" }
+            { text: "Try to Trick the Witch", next: "trick_witch" },
+            { text: "Call for Gretel", next: "call_gretel" }
         ]
     },
-    trickWitch: {
-        text: "Gretel tricks the witch by using a bone instead of Hansel’s finger. When the witch prepares the oven, Gretel pushes her in!",
+    explore_house: {
+        text: "You sneak through the house and find a spellbook and a giant key.",
         choices: [
-            { text: "Free Hansel and explore the house", next: "findTreasure" },
-            { text: "Just escape right away", next: "forestEscape" }
+            { text: "Take the Key", next: "take_key" },
+            { text: "Read the Spellbook", next: "read_spellbook" }
         ]
     },
-    noPlan: {
-        text: "Without a plan, time runs out. The witch eats Hansel, then turns to Gretel next. A tragic end.",
-        choices: []
+    climb_tree: {
+        text: "From the treetop, you spot smoke rising in the distance.",
+        choices: [
+            { text: "Head Toward the Smoke", next: "toward_smoke" },
+            { text: "Look for a River", next: "find_river" }
+        ]
     },
-    seeLight: {
-        text: "Hansel sees a flicker of light and leads Gretel toward it. They find a small cabin where a kind herbalist shelters them.",
-        choices: []
+    trick_witch: {
+        text: "You pretend to be too thin by holding out a chicken bone. The witch grows impatient.",
+        choices: [
+            { text: "Keep Stalling", next: "keep_stalling" },
+            { text: "Plan an Escape", next: "call_gretel" }
+        ]
     },
-    lostDeeper: {
-        text: "They wander until they are too weak to continue. The forest swallows them whole.",
-        choices: []
+    call_gretel: {
+        text: "Gretel appears and distracts the witch. You pass her a plan.",
+        choices: [
+            { text: "Lure the Witch to the Oven", next: "lure_oven" },
+            { text: "Use a Spell to Fight Her", next: "use_spell" }
+        ]
     },
-    forestEscape: {
-        text: "They race through the forest and eventually find a path leading home. Their father weeps with joy upon their return.",
-        choices: []
+    take_key: {
+        text: "You pocket the key and quietly unlock Hansel’s cage.",
+        choices: [
+            { text: "Free Him and Run", next: "escape_house" },
+            { text: "Set a Trap for the Witch", next: "trap_witch" }
+        ]
     },
-    caughtWatching: {
-        text: "The witch senses them outside and drags them in. Their spying has sealed their fate.",
-        choices: []
+    read_spellbook: {
+        text: "You learn a spell that turns sugar into stone. Could be useful.",
+        choices: [
+            { text: "Use it on the Witch", next: "use_spell" },
+            { text: "Save it for Later", next: "take_key" }
+        ]
     },
-    findTreasure: {
-        text: "Inside the house, they find gold and jewels. They carry what they can and return home, changing their fate forever.",
+    toward_smoke: {
+        text: "You find a cabin with kind villagers who help you. But Gretel is still missing!",
+        choices: [
+            { text: "Go Back for Gretel", next: "return_forest" }
+        ]
+    },
+    find_river: {
+        text: "You follow the river but fall into a trap! You must escape.",
+        choices: [
+            { text: "Call for Help", next: "call_gretel" }
+        ]
+    },
+    keep_stalling: {
+        text: "The witch grows furious. Time is running out.",
+        choices: [
+            { text: "Signal Gretel Now", next: "call_gretel" }
+        ]
+    },
+    lure_oven: {
+        text: "Gretel tricks the witch into leaning over the oven. You push her in!",
+        choices: [
+            { text: "Grab Her Treasure and Escape", next: "escape_house" }
+        ]
+    },
+    use_spell: {
+        text: "The spell works! The witch turns to brittle candy stone.",
+        choices: [
+            { text: "Break Free and Escape", next: "escape_house" }
+        ]
+    },
+    trap_witch: {
+        text: "You rig a trap and the witch falls into it! You’re both safe.",
+        choices: [
+            { text: "Burn the House Down and Leave", next: "escape_house" }
+        ]
+    },
+    escape_house: {
+        text: "You and Gretel escape the house, treasure in hand. A path opens leading home.",
+        choices: [
+            { text: "Follow the Path", next: "follow_path" }
+        ]
+    },
+    return_forest: {
+        text: "You find Gretel fighting the witch! You jump in to help.",
+        choices: [
+            { text: "Fight Together", next: "lure_oven" }
+        ]
+    },
+    follow_path: {
+        text: "You safely return home with your sibling. Your adventure ends with newfound courage and cleverness.",
         choices: []
     }
 };
-
-
-            
-        function renderScene(sceneKey) {
-            const scene = storyData[sceneKey];
-            document.getElementById("story").innerText = scene.text;
-            const choicesDiv = document.getElementById("choices");
-            choicesDiv.innerHTML = "";
-            
-            scene.choices.forEach(choice => {
-                const button = document.createElement("button");
-                button.innerText = choice.text;
-                button.onclick = () => renderScene(choice.next);
-                choicesDiv.appendChild(button);
-            });
-        }
         
-        renderScene("begin");
-    </script>
+    function renderScene(sceneKey) {
+        const scene = storyData[sceneKey];
+        document.getElementById("story").innerText = scene.text;
+        const choicesDiv = document.getElementById("choices");
+        choicesDiv.innerHTML = "";
+        
+        scene.choices.forEach(choice => {
+            const button = document.createElement("button");
+            button.innerText = choice.text;
+            button.onclick = () => renderScene(choice.next);
+            choicesDiv.appendChild(button);
+        });
+    }
+
+    renderScene("begin");
+</script>
 
 <footer class="footer">
     <p>&copy; 2025 O.O Adventures. All Rights Reserved.</p>
