@@ -1,1 +1,462 @@
-test
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>O.O Adventures</title>
+
+        <!-- link to style.css -->
+        <link rel="stylesheet" href="../Css/style.css">
+        <!-- from fontawesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+        <!-- Google Fonts Link For Icons -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" >
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+        <script defer src="../Js/main.js"></script>
+        <style>
+            body { font-family: Arial, sans-serif; background-color: #f8f3dc; padding: 20px; }
+
+        </style>
+
+    </head>
+    <body>
+        <div class="upper"> 
+            <!-- Header -->
+            <header>
+
+                <a href="../index.html">
+                    <img src="../images/O.O_Logo.png" alt="LOGO" class="logo" >
+                </a>
+
+                <div class="bar-btn" id="bar-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Nav Popup  -->
+
+                <div class="nav-popup nav-popup-toggle">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#feature-stories">Feature Stories</a>
+                    <a href="Reviews.html">Reviews</a>
+                    <a href="Packages.html">Our Plans</a>
+                </div>
+
+                <!-- Main Nav Menu -->
+
+                <div class="nav">
+                    <div class="nav-items">
+                        <a href="../index.html">Home</a>
+                        <a href="../index.html#feature-stories">Feature Stories</a>
+                        <a href="Reviews.html">Reviews</a>
+                        <a href="Packages.html">Our Plans</a>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <img src="../images/search-icon-png-21.png" class="Find-i" id="Find-i"  alt="Find-icon">
+                    <button class="Login-popup">Login</button>
+
+                    <!-- Search Button -->
+                    <div class="Find-box1" id="Find-box1">
+                        <div class="Search-box1">
+                            <input type="text" placeholder="Type here ....">
+                            <label class="fi-icon">
+                                <i class="fas fa-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </header>
+ 
+            <!-- login Button -->
+            <section class="login-section">
+                <div class="login-wrapper">
+                    <span class="i-close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="reg-box">
+
+                        <!-- Login Part -->
+                        <div class="f-box login">
+                            <div class="reg-title">
+                                <h2>Login</h2>
+                                <p>Please login to use the platform</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox">
+                                        Remember me
+                                    </label>
+                                    <a href="#">Forgot password?</a>
+                                </div>
+
+                                <button type="submit" class="log-btn">Login</button>
+
+                                <div class="lreg-link">
+                                    <p>Don't have an account? <a href="#" class="reg-link">Register</a></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <!-- Register Part -->
+                        <div class="f-box register">
+                            <div class="reg-title">
+                                <h2>Registration</h2>
+                                <p>Please provide the following to verify
+                                    your identify</p>
+                            </div>
+
+                            <form action="#">
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-user"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Full Name</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </span>
+                                    <input type="text" required>
+                                    <label>Email</label>
+                                </div>
+
+                                <div class="inp-box">
+                                    <span class="icon">
+                                        <i class="fa-solid fa-lock"></i>
+                                    </span>
+                                    <input type="password" required>
+                                    <label>Password</label>
+                                </div>
+
+                                <div class="rember-forg">
+                                    <label>
+                                        <input type="checkbox" id="show-password-checkbox">
+                                        Show Password
+                                    </label>
+                                </div>
+
+                                <button type="submit" class="log-btn">Register</button>
+
+                                <div class="lreg-link">
+                                    <p>Already have an account ?<a href="#" class="log-link">Login</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="logmedia-opt">
+                        <a href="https://www.gmail.com">
+                            <i class="fa-brands fa-google"></i>
+                            <span>Login with Google</span>
+                        </a>
+                        <a href="https://www.facebook.com">
+                            <i class="fa-brands fa-facebook"></i>
+                            <span>Login with facebook</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class = "StoryPosition">
+            <h1>Rapunzel</h1>
+            <div id="story" class="story"></div>
+            <div id="choices" class="choices"></div>         
+        </div>
+
+        <div class = "StoryPic2">
+           <img src = "../images/StoryCard/Rapunzel.jpg">
+        </div>
+
+        <div class="FeaturedALT">
+            <section id="feature-stories" class="feature-stories">
+                <h2>Featured Stories</h2>
+                <div class="carousel-container">
+                    <button class="prev-btn">&#10094;</button> <!-- Left arrow -->
+                    <div class="carousel">
+                        <!-- Story Card 1 -->
+                        <div class="story-card">
+                            <a href="..\html\BeforeChristmas.html"><img src="..\images\StoryCard\christmas.jpg" alt="Before the Christmas" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Before the Christmas</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 2 -->
+                        <div class="story-card">
+                            <a href="..\html\Jack&Beanstalk.html"><img src="..\images\StoryCard\jackandbeanstalk.jpg" alt="JackAndBeanstalk" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Jack and the Beanstalk</h3>
+
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 3 -->
+                        <div class="story-card">
+                            <a href="..\html\Goldilock.html"><img src="..\images\StoryCard\GoldAND3B.jpg" alt="Goldilock And 3Bears" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goldilock And 3 Bears</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 4 -->
+                        <div class="story-card">
+                            <a href="..\html\HalfBloodPrince.html"><img src="..\images\StoryCard\HP1.jpg" alt="HalfBlood Prince" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>HalfBlood Prince</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 5 -->
+                        <div class="story-card">
+                            <a href="..\html\GobletOfFire.html"><img src="..\images\StoryCard\HP2.jpg" alt="Goblet of Fire" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Goblet of Fire</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 6 -->
+                        <div class="story-card">
+                            <a href="..\html\LittleRedRidingHood.html"><img src="..\images\StoryCard\LRR.jpg" alt="Little Red Riding Hood" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Little Red Riding Hood</h3>
+                            </div>
+                        </div>
+
+                        <!-- Story Card 7 -->
+                        <div class="story-card">
+                            <a href="..\html\rapunzel.html"><img src="..\images\StoryCard\Rapunzel.jpg" alt="Rapunzel" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Rapunzel</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 8 -->
+                        <div class="story-card">
+                            <a href="..\html\WildSwans.html"><img src="..\images\StoryCard\wildswans.jpg" alt="WildSwans" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Wild Swans</h3>
+                            </div>
+                        </div>
+            
+                        <!-- Story Card 9 -->
+                        <div class="story-card">
+                            <a href="..\html\HanselAndGretal.html"><img src="..\images\StoryCard\hanselandgretal.jpg" alt="Hansel&Gretal" class="story-image"></a>
+                            <div class="story-info">
+                                <h3>Hansel and Gretal</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="next-btn">&#10095;</button> <!-- Right arrow -->
+                </div>
+                <div class="dots-container"></div> <!-- Dots for navigation -->
+            </section>
+        </div>    
+    </body>
+
+
+
+
+<script>
+    const storyData = {
+        begin: {
+            text: "You are Rapunzel, locked away in a tall tower by the evil witch. One day, you hear a voice calling from below. It is a prince. What do you do?",
+            choices: [
+                { text: "Call out to the prince", next: "call_out_prince" },
+                { text: "Stay quiet and observe", next: "stay_quiet" }
+            ]
+        },
+        call_out_prince: {
+            text: "The prince hears you and asks if you are trapped. He offers to help. What do you do?",
+            choices: [
+                { text: "Tell him you're trapped", next: "tell_prince_trapped" },
+                { text: "Lie and say you're fine", next: "lie_to_prince" }
+            ]
+        },
+        stay_quiet: {
+            text: "You stay quiet, watching the prince leave. Days pass, and you wonder if he will return. What do you do?",
+            choices: [
+                { text: "Call out to him again", next: "call_out_prince" },
+                { text: "Wait and hope he returns", next: "wait_for_prince" }
+            ]
+        },
+        tell_prince_trapped: {
+            text: "The prince is shocked and promises to return with a way to rescue you. The next day, he comes back with a plan. What do you do?",
+            choices: [
+                { text: "Help him with the plan", next: "help_with_plan" },
+                { text: "Wait for the witch to leave", next: "wait_for_witch" }
+            ]
+        },
+        lie_to_prince: {
+            text: "The prince seems confused but leaves, promising to return. What will you do now?",
+            choices: [
+                { text: "Plan your escape", next: "plan_escape" },
+                { text: "Stay hidden and wait", next: "stay_hidden" }
+            ]
+        },
+        plan_escape: {
+            text: "You start to look for a way out. You've heard rumors of a secret door. What do you do?",
+            choices: [
+                { text: "Search for the secret door", next: "find_secret_door" },
+                { text: "Prepare to confront the witch", next: "defy_witch" }
+            ]
+        },
+        wait_for_prince: {
+            text: "The prince returns with a rope. He offers to climb up your hair to rescue you. What do you do?",
+            choices: [
+                { text: "Tie your hair for him", next: "tie_hair" },
+                { text: "Refuse and wait for another plan", next: "refuse_plan" }
+            ]
+        },
+        help_with_plan: {
+            text: "You help the prince. He climbs up your hair, and together, you escape the tower. What do you do next?",
+            choices: [
+                { text: "Escape to the prince's kingdom", next: "escape_together" },
+                { text: "Hide and wait for the witch to leave", next: "wait_for_witch" }
+            ]
+        },
+        wait_for_witch: {
+            text: "The witch comes back and is furious to find you’ve been speaking with the prince. What do you do?",
+            choices: [
+                { text: "Apologize and beg for mercy", next: "beg_for_mercy" },
+                { text: "Stand your ground", next: "defy_witch" }
+            ]
+        },
+        defy_witch: {
+            text: "You defy the witch’s commands. She locks you in a more secure part of the tower. What do you do?",
+            choices: [
+                { text: "Search for another way out", next: "find_secret_door" },
+                { text: "Call for help", next: "call_for_help" }
+            ]
+        },
+        find_secret_door: {
+            text: "You find a secret door, but the witch hears you and locks you in a deeper part of the tower. What do you do?",
+            choices: [
+                { text: "Wait for the prince", next: "wait_for_prince" },
+                { text: "Try to break the door", next: "break_door" }
+            ]
+        },
+        break_door: {
+            text: "You try to break the door, but the witch catches you in the act. She locks you away even tighter. What do you do?",
+            choices: [
+                { text: "Wait for the prince", next: "wait_for_prince" },
+                { text: "Cry for help", next: "cry_for_help" }
+            ]
+        },
+        cry_for_help: {
+            text: "You cry for help, and the prince hears you. He comes to your aid and helps you escape.",
+            choices: [
+                { text: "Thank the prince", next: "thank_prince" }
+            ]
+        },
+        stay_hidden: {
+            text: "You hide and wait. The witch eventually leaves, and the prince returns to rescue you. What do you do?",
+            choices: [
+                { text: "Escape with the prince", next: "escape_together" },
+                { text: "Plan your next move", next: "plan_escape" }
+            ]
+        },
+        refuse_plan: {
+            text: "You refuse to tie your hair for the prince. The prince leaves, and the witch becomes more suspicious. What do you do?",
+            choices: [
+                { text: "Try to escape on your own", next: "plan_escape" },
+                { text: "Wait for the prince to return", next: "wait_for_prince" }
+            ]
+        },
+        escape_together: {
+            text: "You and the prince escape the tower and live happily ever after, free from the witch's control.",
+            choices: [
+                { text: "End the story", next: "end" }
+            ]
+        },
+        beg_for_mercy: {
+            text: "The witch is furious but decides to give you another chance. However, she warns you never to see the prince again. What do you do?",
+            choices: [
+                { text: "Agree to the witch's terms", next: "agree_to_witch" },
+                { text: "Defy the witch and see the prince", next: "defy_witch" }
+            ]
+        },
+        agree_to_witch: {
+            text: "You agree to the witch's terms, but you feel trapped. You must find another way to escape.",
+            choices: [
+                { text: "Wait for the prince", next: "wait_for_prince" },
+                { text: "Plan a different escape", next: "plan_escape" }
+            ]
+        },
+        thank_prince: {
+            text: "You thank the prince, and together, you escape the tower and live happily ever after.",
+            choices: [
+                { text: "End the story", next: "end" }
+            ]
+        },
+        end: {
+            text: "You and the prince are free. The witch is defeated, and you are safe in the prince’s kingdom.",
+            choices: []
+        },
+        tie_hair: {
+            text: "You tie your hair, and the prince climbs up to rescue you. You escape the tower and live happily ever after.",
+            choices: [
+                { text: "End the story", next: "end" }
+            ]
+        },
+        call_for_help: {
+            text: "You call for help, and the prince hears you. He comes to your aid and helps you escape.",
+            choices: [
+                { text: "Thank the prince", next: "thank_prince" }
+            ]
+        },
+        call_out_prince: {
+            text: "The prince hears you and asks if you are trapped. He offers to help. What do you do?",
+            choices: [
+                { text: "Tell him you're trapped", next: "tell_prince_trapped" },
+                { text: "Lie and say you're fine", next: "lie_to_prince" }
+            ]
+        }
+    };
+
+    function renderScene(sceneKey) {
+        const scene = storyData[sceneKey];
+        document.getElementById("story").innerText = scene.text;
+        const choicesDiv = document.getElementById("choices");
+        choicesDiv.innerHTML = "";
+        
+        scene.choices.forEach(choice => {
+            const button = document.createElement("button");
+            button.innerText = choice.text;
+            button.onclick = () => renderScene(choice.next);
+            choicesDiv.appendChild(button);
+        });
+    }
+    
+    renderScene("begin");
+</script>
+
+
+
+<footer class="footer">
+    <p>&copy; 2025 O.O Adventures. All Rights Reserved.</p>
+</footer>
+</html>
+    
