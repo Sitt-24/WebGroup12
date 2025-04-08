@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Story</title>
+
+    <!-- Link to external CSS -->
+    <link rel="stylesheet" href="Css/style.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Under the Sea</h1>
+    <div id="story"></div>
+    <script>
+        // Define your story structure here with deeper branching
+        const stories = {
+            start: {
+                text: "You find yourself running through the jungle - you are being chased. Suddenly you see a clearing in the trees and find a long beach waiting in front of you. As you break through the fauna and your feet hit the sand you finally feel the presence behind you halt. You are safe on the beach. You are sweating in the dense heat, and your feet are blazing. The ocean seems to call to you so you decide to take a dip. when you submerge you find that you can breathe somehow - like magic!",
+                choices: [
+                    { text: "Journey deeper into the sea - This must be magic.", next: "choice1" },
+                    { text: "something is wrong, get out of the ocean.", next: "choice2" }
+                ]
+            },
+            choice1: {
+                text: "As you dive deeper into the vast blue ocean, you are surrounded by fish, coral, and reef. You see a creature that reminds you of a dolphin, but it is not quite of this earth, seeming to glow and flow with the water. It looks back at you and continues swimming away.",
+                choices: [
+                    { text: "follow the creature.", next: "choice3" },
+                    { text: "ignore it. Go explore the reef and see if you can catch any fish - you're starving.", next: "choice4" }
+                ]
+            },
+            choice2: {
+                text: "Better to be safe. You jump out of the water and trudge out of the ocean back on to the beach and plop down on the sand. You quickly realize you have nowhere to go except for back into the jungle where you could be back in the chase, or back into the ocean. You can not stay on the beach for too long - it is too hot and bright and empty. what do you do?",
+                choices: [
+                    { text: "I have a better chance of survival in the Jungle where I can find shelter and food.", next: "outcome1" },
+                    { text: "dive back into the ocean and explore this strange magic - maybe there will be an island or other form of rescue.", next: "choice1" }
+                ]
+            },
+            choice3: {
+                text: "you swim up to the magical aquatic being and begin to follow it. It notices you but does not seem to mind your presence. it leads you to the edge of a cave that seems to be emitting a bright and neon light. the creature looks back at you before entering.",
+                choices: [
+                    { text: "Follow it inside the cave - that light resembles sunlight...this could be an escape", next: "choice5" },
+                    { text: "Flee the scene - something is not right about this cave.", next: "choice6" }
+                ]
+            },
+            choice4: {
+                text: "You swim down along the reef and underestimate how vast the garden sprawls down - you find yourself disoriented and lost. A voice calls out to you, and as you whip your head to find the owner of the voice, a mermaid sits amongst the coral and fish. She waves you over to her with a look of concern in her eyes.",
+                choices: [
+                    { text: "Swim over to her, you are lost anyway and she may be able to help you.", next: "choice7" },
+                    { text: "politely decline - you do not want to bother her and think you can find your way on your own.", next: "choice8" }
+                ]
+            },
+            choice5: {
+                text: "When you enter the cave, something feels wrong. the creature - once calm and inviting, rapidly swims away in terror and leaves you all alone. There are two paths in front of you - one appears to be a wide expanse of dark sea, whereas the other path is home to the mysterious glow illuminating the whole cave.",
+                choices: [
+                    { text: "Go through the dark path - open ocean may be a better escape route.", next: "outcome2" },
+                    { text: "follow the path towards the light.", next: "outcome3" }
+                ]
+            },
+            choice6: {
+                text: "When you spin around to flee, a force launches you to the surface and drags you on the beach. You feel a strong urge to return to the water, but are unsure what just happened",
+                choices: [
+                    { text: "enter again - let's try this again; the ocean is still calling to me - maybe it is a second chance and safety.", next: "choice1" },
+                    { text: "Do not go back in - walk along the beach to find help", next: "outcome4" }
+                ]
+            },
+            choice7: {
+                text: "The mermaid smiles as you approach and takes pity on you. you find that you are able to speak and explain that you are lost, and you do not understand how you are able to breathe under the sea. She explains it seems to be the magic of an old witch who guards unimaginable treasure - a treasure that is bewitched with magic and powers. The witch grants humans the ability to come under the sea so that she can hunt them. The mermaid offers you guidance on how to get to safety or on how to best the witch and win her treasure and magic.",
+                choices: [
+                    { text: "Ask more about the treasure. You can beat the witch and walk away with your life and extreme power.", next: "choice9" },
+                    { text: "Ask about how to get yourself to safety. Survival is the most important thing.", next: "choice10" }
+                ]
+            },
+            choice8: {
+                text: "You swim away from the mermaid and keep exploring the reef. You notice something shiny coming from the sea floor and swim down to explore. You find an old silver chest lined with jewels and algae.",
+                choices: [
+                    { text: "Open the chest out of curiosity.", next: "choice11" },
+                    { text: "Leave the chest on the sea floor and keep swimming. You want to get out of here leaving everything undisturbed.", next: "outcome5" }
+                ]
+            },
+            choice9: {
+                text: "The Mermaid warns you - the witch is extremely powerful and tells you to proceed with caution. She explains that the witch's leir is at the deepest point of the sea in a deep and dark cave. She tells you there is a hideous monster that guards the witch's treasure - not to mention the witch herself. The mermaid gives you a choice; she will tell you the way around the beast, only if you give her half the treasure.",
+                choices: [
+                    { text: "Ask how to get past the monster - she can have half the goods.", next: "choice12" },
+                    { text: "Go to the cave without the advice - you made it this far you can do it.", next: "choice13" }
+                ]
+            },
+            choice10: {
+                text: "The mermaid explains that you have two choices; the first is a small island home to a poor but loving village who would take you in. The second choice is an underwater oasis with an abundance of food, drinks, and riches. She explains that the underwater kingdom would take you in only if you could provide an offering to the king.",
+                choices: [
+                    { text: "Go on a hunt for a worthy offering to the king - living in an underwater kingdom is amazing.", next: "choice14" },
+                    { text: "Go to the island - it will be safe and you can make it your new home.", next: "outcome6" }
+                ]
+            },
+            choice11: {
+                text: "You open the chest and get blasted with a surge of bubbles, pushing you backward, a single conch shell sits in the chest.",
+                choices: [
+                    { text: "It's just a shell - better to leave it.", next: "choice15" },
+                    { text: "Pick up the shell.", next: "outcome7" }
+                ]
+            },
+            // Adding missing outcomes for the remaining choices
+            choice12: {
+                text: "The mermaid removes her necklace lined with pearls and hands it you, she explains that the treasure can only be retrieved by a human, but that the necklace contains magic to ward off the sea monster. You still must be weary of the witch...But! The witch is blind and if she can not hear you, she can not find you.",
+                choices: [
+                    { text: "go to the cave - you are ready", next: "outcome8" },
+                    { text: "Ask the mermaid to accompany you - you may need her help", next: "outcome9" }
+                ]
+            },
+            choice13: {
+                text: "You begin your journey to the cave, but before you get there, you can feel a presence lurking behind you. You swim fast, itching to get to the cave entrance. The entrance is now in view but you can feel the presence getting closer to you.",
+                choices: [
+                    { text: "Retreat! Whatever is following you seems concerned with the cave - diverge paths and swim towards the surface.", next: "outcome10" },
+                    { text: "Full speed ahead to the cave!", next: "outcome11" }
+                ]
+            },
+            choice14: {
+                text: "You wave the mermaid goodbye and set off for the kingdom but first - a worthy offering must be found. do you go to the reef for a natural treasure from the sea, or attempt to find the real treasure of gold or silver - you remember passing a shipwreck somewhere down here.",
+                choices: [
+                    { text: "Find the shipwreck and look for gold or silver", next: "outcome12" },
+                    { text: "explore the reef for something spectacular from the deep.", next: "outcome13" }
+                ]
+            },
+            choice15: {
+                text: "You drop the chest uninterested in the shell, but as soon as you do - you feel your ability to hold your breath fading away. the Shell - bewitched with magic - is stealing your breathe as it floats down to the ocean floor.",
+                choices: []
+            },
+
+            // Outcomes
+            outcome1: {
+                text: "You journey back into the jungle. It appears to be safe, the beast chasing you must have found a new victim. You travel deeper into the foliage only to come face to face with a new sort of monster. It is too late to escape back to the beach, and the jungle takes you as its own.",
+                choices: []
+            },
+            outcome2: {
+                text: "You go through the dark path into the deep blue - the right choice. You are spit out in the calmness of the sea and notice what seems to be land far off in the distance. you get to swimming and begin the trek to land.",
+                choices: []
+            },
+            outcome3: {
+                text: "When you swim towards the light, they find that it is emanating from a sea monster that is glowing a variety of neon color. While you attempt to swim away, you are sadly no match for the beast.",
+                choices: []
+            },
+            outcome4: {
+                text: "You search the beach for miles, and after hours of painfully walking on the hot sand you finally stumble upon a small village on the beach. They take you in, and give you water, food, and shelter. You are safe, but can not help but wonder what the magic was in the depths of the sea.",
+                choices: []
+            },
+            outcome5: {
+                text: "You leave the chest and keep swimming. In seconds, a creature of the deep grabs you. 'Did you open my chest?' it bellows in fury. You have no time to explain and are no match for the sea creature. It drags you deeper and deeper into the blue until all the sunlight on the surface disappears.",
+                choices: []
+            },
+            outcome6: {
+                text: "You follow the mermaid's directions and soon ride the current into the island. The small village offers you a cozy bamboo hut on the beach to rest. Someone brings you fruit and water. This is not so bad, and you are finally safe. ",
+                choices: []
+            },
+            outcome7: {
+                text: "The second you pick up the shell - bewitched with magic - you feel yourself shrinking and being pulled down into the shell. It eats you whole and claims you as its own.",
+                choices: []
+            },
+            outcome8: {
+                text: "You make it past the monster with ease and make sure to stay silent so the witch cannot find you. You claim the witch's treasure, and magic to send yourself back home to safety, leaving the mermaid with half the loot on your way home.",
+                choices: []
+            },
+            outcome9: {
+                text: "The mermaid smiles and agrees to accompany you. When you make it past the monster with ease, you make sure to remain silent to avoid the witch, but suddenly you see her, and she somehow notices you and the mermaid as well. 'she must be able to sense me!' the mermaid realizes at once. It is too late to escape and the witch gets you both.",
+                choices: []
+            },
+            outcome10: {
+                text: "You try to escape to the surface where the witch can not get you, but she has seemed to take away your powers to breath underwater now that she will not get you. You find yourself in the middle of the sea with no sign of land.",
+                choices: []
+            },
+            outcome11: {
+                text: "You are close to the entrance, but before the witch can get you, her terrifying beast is upon you, darting out of the cave. There is nothing you can do, and you are bested by the sea monster.",
+                choices: []
+            },
+            outcome12: {
+                text: "Your boldness pays off, and the shipwreck is packed with treasures. you find an offering from above the sea and present it to the king. He accepts your gifts and invites you live among the magical kingdom. you are safe and surrounded by magic and abundance.",
+                choices: []
+            },
+            outcome13: {
+                text: "While the reef offered an abundance of beauty, the king is offended that you would steal from it, harming the ocean blue. He sends you away, and again you are on your own and in danger.",
+                choices: []
+            }
+        };
+
+       function loadStory(part) {
+            const storyDiv = document.getElementById("story");
+            storyDiv.innerHTML = `<p>${stories[part].text}</p>`;
+            
+            // Remove previous choices before adding new ones
+            while (storyDiv.querySelectorAll(".choice").length > 0) {
+                storyDiv.querySelector(".choice").remove();
+            }
+            
+            if (stories[part].choices.length > 0) {
+                stories[part].choices.forEach(choice => {
+                    const button = document.createElement("button");
+                    button.innerText = choice.text;
+                    button.className = "choice";
+                    button.onclick = () => loadStory(choice.next);
+                    storyDiv.appendChild(button);
+                });
+            } else {
+                const restartButton = document.createElement("button");
+                restartButton.innerText = "Play Again";
+                restartButton.className = "restart";
+                restartButton.onclick = () => loadStory("start");
+                storyDiv.appendChild(restartButton);
+            }
+        }
+
+        loadStory("start");
+    </script>
+</body>
+</html>
