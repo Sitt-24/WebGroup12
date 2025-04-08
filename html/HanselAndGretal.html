@@ -282,138 +282,138 @@
     <script>
     const storyData = {
     begin: {
-        text: "You and your sibling Gretel are lost in a deep, dark forest. As night falls, you see a strange house made entirely of candy. What do you do?",
+        text: "You and your sibling are lost in a deep, dark forest. As night falls, you see a strange house made entirely of candy. What do you do?",
         choices: [
-            { text: "Approach the House", next: "approach_house" },
+            { text: "Approach the house", next: "approach_house" },
         ]
     },
     approach_house: {
-        text: "You walk up to the candy house. It smells amazing. A voice invites you in...",
+        text: "You walk up to the candy house and a voice invites you in...",
         choices: [
-            { text: "Go Inside", next: "go_inside" },
-            { text: "Peek Through the Window", next: "peek_window" },
-            { text: "Run Away", next: "run_away" }
+            { text: "Go in", next: "go_inside" },
+            { text: "Peek through the window first", next: "peek_window" },
+            { text: "Run away", next: "run_away" }
         ]
     },
     go_inside: {
         text: "An old woman greets you with a smile and offers food. Gretel is suspicious.",
         choices: [
-            { text: "Accept the Food", next: "accept_food" },
-            { text: "Refuse and Explore the House", next: "explore_house" }
+            { text: "Accept the food enter", next: "accept_food" },
+            { text: "Refuse the food", next: "explore_house" }
         ]
     },
     peek_window: {
-        text: "You see a cozy room with a large oven... and cages. That’s suspicious.",
+        text: "You see a cozy room with a large oven... and what seems to be cages",
         choices: [
-            { text: "Warn Gretel and Leave", next: "run_away" },
-            { text: "Go Inside Anyway", next: "go_inside" }
+            { text: "Warn Gretel and leave", next: "run_away" },
+            { text: "explore a bit more", next: "go_inside" }
         ]
     },
     run_away: {
         text: "You escape the house but are still lost in the woods.",
         choices: [
-            { text: "Climb a Tree to Look Around", next: "climb_tree" }
+            { text: "Climb a tree to get to higher groud", next: "climb_tree" }
         ]
     },
     accept_food: {
-        text: "You fall asleep after eating, but wake up in a cage! The witch plans to fatten you up.",
+        text: "You fall asleep after eating, but wake up in a cage.",
         choices: [
-            { text: "Try to Trick the Witch", next: "trick_witch" },
-            { text: "Call for Gretel", next: "call_gretel" }
+            { text: "Try to trick the witch", next: "trick_witch" },
+            { text: "Call for Gretel's help", next: "call_gretel" }
         ]
     },
     explore_house: {
-        text: "You sneak through the house and find a spellbook and a giant key.",
+        text: "You sneak through the house and find a spellbook and a key.",
         choices: [
-            { text: "Take the Key", next: "take_key" },
-            { text: "Read the Spellbook", next: "read_spellbook" }
+            { text: "Take the key", next: "take_key" },
+            { text: "take the spellbook", next: "read_spellbook" }
         ]
     },
     climb_tree: {
-        text: "From the treetop, you spot smoke rising in the distance.",
+        text: "From the treetop, you spot smoke rising in the distance, and maybe a river.",
         choices: [
-            { text: "Head Toward the Smoke", next: "toward_smoke" },
-            { text: "Look for a River", next: "find_river" }
+            { text: "Head towards the smoke", next: "toward_smoke" },
+            { text: "follow to the River", next: "find_river" }
         ]
     },
     trick_witch: {
-        text: "You pretend to be too thin by holding out a chicken bone. The witch grows impatient.",
+        text: "You pretend to be asleep still The witch grows impatient.",
         choices: [
-            { text: "Keep Stalling", next: "keep_stalling" },
-            { text: "Plan an Escape", next: "call_gretel" }
+            { text: "Keep stalling", next: "keep_stalling" },
+            { text: "Plan an escape", next: "call_gretel" }
         ]
     },
     call_gretel: {
         text: "Gretel appears and distracts the witch. You pass her a plan.",
         choices: [
-            { text: "Lure the Witch to the Oven", next: "lure_oven" },
-            { text: "Use a Spell to Fight Her", next: "use_spell" }
+            { text: "Lure the witch to the vven", next: "lure_oven" },
+            { text: "Use a spell against her", next: "use_spell" }
         ]
     },
     take_key: {
-        text: "You pocket the key and quietly unlock Hansel’s cage.",
+        text: "You pocket the key and quietly unlock the cage.",
         choices: [
-            { text: "Free Him and Run", next: "escape_house" },
-            { text: "Set a Trap for the Witch", next: "trap_witch" }
+            { text: "open the cage and run", next: "escape_house" },
+            { text: "Set a trap for the Witch so you are not followed", next: "trap_witch" }
         ]
     },
     read_spellbook: {
-        text: "You learn a spell that turns sugar into stone. Could be useful.",
+        text: "You learn a spell that turns things to stone.",
         choices: [
-            { text: "Use it on the Witch", next: "use_spell" },
-            { text: "Save it for Later", next: "take_key" }
+            { text: "Use it on the Witch now", next: "use_spell" },
+            { text: "Save it for later when you may need it more", next: "take_key" }
         ]
     },
     toward_smoke: {
-        text: "You find a cabin with kind villagers who help you. But Gretel is still missing!",
+        text: "You find a cabin with kind villagers who help you. But your sibling is still missing!",
         choices: [
-            { text: "Go Back for Gretel", next: "return_forest" }
+            { text: "Go Back for them", next: "return_forest" }
         ]
     },
     find_river: {
         text: "You follow the river but fall into a trap! You must escape.",
         choices: [
-            { text: "Call for Help", next: "call_gretel" }
+            { text: "Call for help", next: "call_gretel" }
         ]
     },
     keep_stalling: {
         text: "The witch grows furious. Time is running out.",
         choices: [
-            { text: "Signal Gretel Now", next: "call_gretel" }
+            { text: "Signal Gretel now", next: "call_gretel" }
         ]
     },
     lure_oven: {
         text: "Gretel tricks the witch into leaning over the oven. You push her in!",
         choices: [
-            { text: "Grab Her Treasure and Escape", next: "escape_house" }
+            { text: "Grab as much as you can and Escape", next: "escape_house" }
         ]
     },
     use_spell: {
-        text: "The spell works! The witch turns to brittle candy stone.",
+        text: "The spell works! The witch turns to stone.",
         choices: [
-            { text: "Break Free and Escape", next: "escape_house" }
+            { text: "Break free and escape", next: "escape_house" }
         ]
     },
     trap_witch: {
         text: "You rig a trap and the witch falls into it! You’re both safe.",
         choices: [
-            { text: "Burn the House Down and Leave", next: "escape_house" }
+            { text: "Leave as fast as possible.", next: "escape_house" }
         ]
     },
     escape_house: {
         text: "You and Gretel escape the house, treasure in hand. A path opens leading home.",
         choices: [
-            { text: "Follow the Path", next: "follow_path" }
+            { text: "Follow the path", next: "follow_path" }
         ]
     },
     return_forest: {
         text: "You find Gretel fighting the witch! You jump in to help.",
         choices: [
-            { text: "Fight Together", next: "lure_oven" }
+            { text: "Fight her together", next: "lure_oven" }
         ]
     },
     follow_path: {
-        text: "You safely return home with your sibling. Your adventure ends with newfound courage and cleverness.",
+        text: "You safely return home with your sibling",
         choices: []
     }
 };
