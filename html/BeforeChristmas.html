@@ -384,21 +384,20 @@
     }
 };      
 
-    const totalScenes = Object.keys(storyData).length;
-    let visitedScenes = new Set();
+    let stepsTaken = 0;
+    const maxProgressBeforeEnd = 90;
 
     function renderScene(sceneKey) {
         const scene = storyData[sceneKey];
 
-        // Track scene as visited
-        visitedScenes.add(sceneKey);
-
-        // Update story text
+        // Show story text
         document.getElementById("story").innerText = scene.text;
 
-        // Display choices
+        // Clear choices
         const choicesDiv = document.getElementById("choices");
         choicesDiv.innerHTML = "";
+
+        // Display choices
         scene.choices.forEach(choice => {
             const button = document.createElement("button");
             button.innerText = choice.text;
@@ -406,15 +405,20 @@
             choicesDiv.appendChild(button);
         });
 
+        // Update steps BEFORE checking progress (only if not end)
+        if (sceneKey !== "end") {
+            stepsTaken++;
+        }
+
         updateProgressBar(sceneKey);
     }
 
     function updateProgressBar(sceneKey) {
-        let progress = (visitedScenes.size / totalScenes) * 100;
-        if (sceneKey === "end") {
-            progress = 100;
-        }
-        document.getElementById("progress-bar").style.width = `${progress}%`;
+    const scene = storyData[sceneKey];
+    const isEnding = scene.choices.length === 0;
+
+    const progress = isEnding ? 100 : Math.min(stepsTaken * 10, maxProgressBeforeEnd);
+    document.getElementById("progress-bar").style.width = `${progress}%`;
     }
 
     renderScene("begin");
