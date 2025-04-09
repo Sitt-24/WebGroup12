@@ -21,14 +21,14 @@
 
   header{
     z-index: 800;
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 200px;
+    padding: 10px 40px;
     transition: 0.5s ease;
   }
   
@@ -40,7 +40,6 @@
     margin-left: 30px;
     text-decoration: none;
     transition: 0.3s ease;
-    
   }
 
   .bar-btn{
@@ -542,7 +541,7 @@
  .container{
   max-width: 1300px;
   margin: auto;
-  padding: 100px 70px;
+  padding: 15px 60px;
  }
 
 .row{
@@ -882,7 +881,7 @@ ul{
 .container5{
   max-width: 1300px;
   margin: auto;
-  padding: 40px 100px;
+  padding: 40px 70px;
   color: #edf2f3;
 }
 .Contact-w{
