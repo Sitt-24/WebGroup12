@@ -16,9 +16,6 @@
             <p>Unravel the secret of the princesses’ nightly journey!</p>
         </header>
 
-<style>
-    body { background: red; }
-</style>
 
         <!-- Story Progress -->
         <div class="story-container">
