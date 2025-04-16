@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Juniper Tree Interactive</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>The Juniper Tree</h1>
+    </header>
+    <main>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="story" class="story"></div>
+      <div id="choices" class="choices"></div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Interactive Story Adventures. All Rights Reserved.</p>
+    </footer>
+    
+    <script>
+      const storyData = {
+        begin: {
+          text: "Under the shade of a juniper tree, a cruel story unfolds. A stepmother envies her stepson and plots against him. What will you do next?",
+          choices: [
+            { text: "Explore the Forest", next: "explore_forest" },
+            { text: "Stay Near the Tree", next: "stay_tree" }
+          ]
+        },
+        explore_forest: {
+          text: "You wander deeper into the forest and discover the stepmother's secret plan. Will you confront her or find help?",
+          choices: [
+            { text: "Confront Her", next: "confront" },
+            { text: "Seek Help", next: "seek_help" }
+          ]
+        },
+        stay_tree: {
+          text: "You stay near the juniper tree and hear whispers of an ominous event. What will you do?",
+          choices: [
+            { text: "Investigate the Whispers", next: "investigate_whispers" },
+            { text: "Leave the Area", next: "leave_area" }
+          ]
+        },
+        confront: {
+          text: "You confront the stepmother. Her anger reveals a chilling plan, and she warns you to stay silent.",
+          choices: [
+            { text: "Defy Her", next: "defy" },
+            { text: "Retreat in Fear", next: "retreat" }
+          ]
+        },
+        seek_help: {
+          text: "You find a kind-hearted neighbor who promises to help stop the cruelty.",
+          choices: []
+        },
+        investigate_whispers: {
+          text: "The whispers lead you to a hidden truth about the boy's fate. You must act fast.",
+          choices: [
+            { text: "Save the Boy", next: "save_boy" },
+            { text: "Expose the Truth", next: "expose_truth" }
+          ]
+        },
+        leave_area: {
+          text: "You leave the area, haunted by the echoes of the whispers and unresolved turmoil.",
+          choices: []
+        },
+        defy: {
+          text: "You defy the stepmother and gather others to stop her. Justice prevails.",
+          choices: []
+        },
+        retreat: {
+          text: "You retreat in fear, and the stepmother's plan goes unchallenged.",
+          choices: []
+        },
+        save_boy: {
+          text: "You save the boy, and his spirit finds peace under the juniper tree.",
+          choices: []
+        },
+        expose_truth: {
+          text: "You expose the truth, and the stepmother faces the consequences of her actions.",
+          choices: []
+        }
+      };
+
+      let stepsTaken = 0;
+      const maxProgressBeforeEnd = 100;
+
+      function renderScene(sceneKey) {
+        const scene = storyData[sceneKey];
+        document.getElementById("story").innerText = scene.text;
+        const choicesDiv = document.getElementById("choices");
+        choicesDiv.innerHTML = "";
+        scene.choices.forEach(choice => {
+          const button = document.createElement("button");
+          button.innerText = choice.text;
+          button.onclick = () => renderScene(choice.next);
+          choicesDiv.appendChild(button);
+        });
+        if (sceneKey !== "end") {
+          stepsTaken++;
+        }
+        updateProgressBar(sceneKey);
+      }
+
+      function updateProgressBar(sceneKey) {
+        const scene = storyData[sceneKey];
+        const isEnding = scene.choices.length === 0;
+        const progress = isEnding ? 100 : Math.min(stepsTaken * 10, maxProgressBeforeEnd);
+        document.getElementById("progress-bar").style.width = `${progress}%`;
+      }
+
+      renderScene("begin");
+    </script>
+  </body>
+</html>
