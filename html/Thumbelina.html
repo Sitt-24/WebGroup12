@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thumbelina Interactive</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Thumbelina</h1>
+    </header>
+    <main>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="story" class="story"></div>
+      <div id="choices" class="choices"></div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Interactive Story Adventures. All Rights Reserved.</p>
+    </footer>
+    <script>
+
+
+      
+      const storyData = {
+        begin: {
+          text: "Born from a magical flower, Thumbelina embarks on an extraordinary journey. Her small size belies her great courage. What do you do?",
+          choices: [
+            { text: "Follow Thumbelina's Path", next: "follow_path" },
+            { text: "Stay in the Flower", next: "stay_flower" }
+          ]
+        },
+        follow_path: {
+          text: "Thumbelina steps into the wide world and encounters a toad who wishes to marry her. What should she do?",
+          choices: [
+            { text: "Escape the Toad", next: "escape_toad" },
+            { text: "Confront the Toad", next: "confront_toad" }
+          ]
+        },
+        stay_flower: {
+          text: "Thumbelina stays in the flower, but the world outside beckons with adventure and wonder.",
+          choices: []
+        },
+        escape_toad: {
+          text: "With the help of some friendly fish, Thumbelina escapes the toad's clutches. She floats downstream on a lily pad. What’s next?",
+          choices: [
+            { text: "Seek Safety", next: "seek_safety" },
+            { text: "Explore the Riverbank", next: "explore_riverbank" }
+          ]
+        },
+        confront_toad: {
+          text: "Thumbelina boldly confronts the toad and manages to frighten him away.",
+          choices: []
+        },
+        seek_safety: {
+          text: "Thumbelina finds shelter among the reeds, where a kind mouse befriends her.",
+          choices: [
+            { text: "Stay with the Mouse", next: "stay_mouse" },
+            { text: "Continue the Journey", next: "continue_journey" }
+          ]
+        },
+        explore_riverbank: {
+          text: "Thumbelina explores the riverbank and discovers a family of birds who offer to help her.",
+          choices: [
+            { text: "Fly Away with the Birds", next: "fly_birds" },
+            { text: "Stay on the Riverbank", next: "stay_riverbank" }
+          ]
+        },
+        stay_mouse: {
+          text: "The mouse introduces Thumbelina to a mole who wishes to marry her, but Thumbelina dreams of freedom.",
+          choices: [
+            { text: "Escape the Mole", next: "escape_mole" },
+            { text: "Accept the Proposal", next: "accept_proposal" }
+          ]
+        },
+        continue_journey: {
+          text: "Thumbelina bids farewell to the mouse and ventures out, seeking her destiny.",
+          choices: []
+        },
+        fly_birds: {
+          text: "The birds carry Thumbelina to a faraway land where she meets others her size and finds true happiness.",
+          choices: []
+        },
+        stay_riverbank: {
+          text: "Thumbelina enjoys the peace of the riverbank, but her heart longs for more adventure.",
+          choices: []
+        },
+        escape_mole: {
+          text: "Thumbelina escapes the mole and discovers a magical field where she meets a prince who is just like her.",
+          choices: []
+        },
+        accept_proposal: {
+          text: "Thumbelina marries the mole and settles underground, but her dreams of the open sky remain unfulfilled.",
+          choices: []
+        }
+      };
+
+      let stepsTaken = 0;
+      const maxProgressBeforeEnd = 100;
+
+      function renderScene(sceneKey) {
+        const scene = storyData[sceneKey];
+        document.getElementById("story").innerText = scene.text;
+        const choicesDiv = document.getElementById("choices");
+        choicesDiv.innerHTML = "";
+        scene.choices.forEach(choice => {
+          const button = document.createElement("button");
+          button.innerText = choice.text;
+          button.onclick = () => renderScene(choice.next);
+          choicesDiv.appendChild(button);
+        });
+        if (sceneKey !== "end") {
+          stepsTaken++;
+        }
+        updateProgressBar(sceneKey);
+      }
+
+      function updateProgressBar(sceneKey) {
+        const scene = storyData[sceneKey];
+        const isEnding = scene.choices.length === 0;
+        const progress = isEnding ? 100 : Math.min(stepsTaken * 10, maxProgressBeforeEnd);
+        document.getElementById("progress-bar").style.width = `${progress}%`;
+      }
+
+      renderScene("begin");
+    </script>
+  </body>
+</html>
