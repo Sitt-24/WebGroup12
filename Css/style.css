@@ -1,5 +1,4 @@
 :root{
-
   --first-colour: hsl(44, 88.24%, 93.33%);
   --second-colour: hsl(183.53, 46.36%, 56.86%);
   --third-colour: hsl(334, 100%, 77%);
@@ -2148,54 +2147,5 @@ input[type="checkbox"]:checked + .toggle-switch::before {
   .logo{
     width: 80px;
     margin-right: 70px;
-  }
-  
-}
-body {
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    background: linear-gradient(to bottom, #2c3e50, #4ca1af);
-    color: white;
-}
-
-header {
-    padding: 20px;
-    font-size: 22px;
-}
-
-.story-container {
-    max-width: 600px;
-    margin: 40px auto;
-    background: #ffffff;
-    color: #333;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#progress-container {
-    width: 100%;
-    background: #ddd;
-    border-radius: 5px;
-    height: 10px;
-}
-
-#progress-bar {
-    width: 0%;
-    height: 10px;
-    background: #3498db;
-    border-radius: 5px;
-}
-
-button {
-    background: #2980b9;
-    border: none;
-    color: white;
-    padding: 10px;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background: #1abc9c;
+  }  
 }
