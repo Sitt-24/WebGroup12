@@ -36,3 +36,166 @@
         <script src="./Js/script.js"></script>
     </body>
 </html>
+
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    background: linear-gradient(to bottom, #2c3e50, #4ca1af);
+    color: white;
+}
+
+header {
+    padding: 20px;
+    font-size: 22px;
+}
+
+.story-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #ffffff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#progress-container {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    height: 10px;
+}
+
+#progress-bar {
+    width: 0%;
+    height: 10px;
+    background: #3498db;
+    border-radius: 5px;
+}
+
+button {
+    background: #2980b9;
+    border: none;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #1abc9c;
+}
+
+const storyData = {
+    begin: {
+        text: "You overhear the twelve princesses talking about a hidden passage beneath their room. Do you investigate?",
+        choices: [
+            { text: "Follow them secretly", next: "follow_secret" },
+            { text: "Alert the king", next: "alert_king" }
+        ]
+    },
+    follow_secret: {
+        text: "You wait until nightfall and sneak behind the princesses as they descend the hidden staircase. What do you do?",
+        choices: [
+            { text: "Step into the enchanted forest", next: "enchanted_forest" },
+            { text: "Turn back while you can", next: "turn_back" }
+        ]
+    },
+    enchanted_forest: {
+        text: "The princesses enter a shimmering forest where golden trees line the path. You spot an old boatman waiting. Do you follow?",
+        choices: [
+            { text: "Board the boat", next: "boat_crossing" },
+            { text: "Hide and observe", next: "hide_observe" }
+        ]
+    },
+    boat_crossing: {
+        text: "The boatman takes you across a silver lake to a grand palace where the princesses begin their endless dance. Do you intervene?",
+        choices: [
+            { text: "Join the dance", next: "dance_curse" },
+            { text: "Search for the source of magic", next: "magic_source" }
+        ]
+    },
+    hide_observe: {
+        text: "You watch from behind a tree as the princesses joyfully dance in the palace halls. Should you reveal yourself?",
+        choices: [
+            { text: "Step forward", next: "reveal_truth" },
+            { text: "Remain hidden", next: "remain_hidden" }
+        ]
+    },
+    magic_source: {
+        text: "You discover an enchanted goblet shimmering in the throne room. Could this be the key to breaking the spell?",
+        choices: [
+            { text: "Take the goblet", next: "break_curse" },
+            { text: "Leave it untouched", next: "dance_curse" }
+        ]
+    },
+    dance_curse: {
+        text: "You feel an irresistible pull into the dance. Time passes endlessly. Can you escape?",
+        choices: [
+            { text: "Break free", next: "break_curse" },
+            { text: "Accept fate", next: "trapped_forever" }
+        ]
+    },
+    break_curse: {
+        text: "You lift the goblet and shatter it, breaking the spell! The princesses are freed, and the king rewards you.",
+        choices: []
+    },
+    trapped_forever: {
+        text: "The magic consumes you, and you become lost in the eternal dance.",
+        choices: []
+    },
+    alert_king: {
+        text: "You inform the king, but he dismisses your concerns. The mystery remains unsolved.",
+        choices: []
+    },
+    turn_back: {
+        text: "You decide not to follow the princesses, leaving their adventure unknown.",
+        choices: []
+    },
+    reveal_truth: {
+        text: "You tell the princesses what you've seen. They reveal that they are under a spell!",
+        choices: [
+            { text: "Help them break the curse", next: "magic_source" },
+            { text: "Keep their secret", next: "dance_curse" }
+        ]
+    },
+    remain_hidden: {
+        text: "You continue watching, but you are never able to uncover the full truth.",
+        choices: []
+    }
+};
+
+let stepsTaken = 0;
+const maxProgressBeforeEnd = 90;
+
+function renderScene(sceneKey) {
+    const scene = storyData[sceneKey];
+
+    document.getElementById("story").innerText = scene.text;
+
+    const choicesDiv = document.getElementById("choices");
+    choicesDiv.innerHTML = "";
+
+    scene.choices.forEach(choice => {
+        const button = document.createElement("button");
+        button.innerText = choice.text;
+        button.onclick = () => renderScene(choice.next);
+        choicesDiv.appendChild(button);
+    });
+
+    if (sceneKey !== "end") {
+        stepsTaken++;
+    }
+
+    updateProgressBar(sceneKey);
+}
+
+function updateProgressBar(sceneKey) {
+    const scene = storyData[sceneKey];
+    const isEnding = scene.choices.length === 0;
+
+    const progress = isEnding ? 100 : Math.min(stepsTaken * 10, maxProgressBeforeEnd);
+    document.getElementById("progress-bar").style.width = `${progress}%`;
+}
+
+renderScene("begin");
