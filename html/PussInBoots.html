@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puss in Boots Interactive</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Puss in Boots</h1>
+    </header>
+    <main>
+      <div id="progress-container">
+        <div id="progress-bar"></div>
+      </div>
+      <div id="story" class="story"></div>
+      <div id="choices" class="choices"></div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Interactive Story Adventures. All Rights Reserved.</p>
+    </footer>
+    <script>
+      const storyData = {
+        begin: {
+          text: "A young miller inherits a cat, but this is no ordinary feline—Puss is clever, charming, and has big plans. What do you do?",
+          choices: [
+            { text: "Listen to Puss's Plan", next: "plan" },
+            { text: "Dismiss the Cat", next: "dismiss_cat" }
+          ]
+        },
+        plan: {
+          text: "Puss hatches a plan to impress the king and bring fortune to his master. He requests boots and a bag. Do you help him?",
+          choices: [
+            { text: "Give Boots and a Bag", next: "equip_puss" },
+            { text: "Deny Puss's Request", next: "deny_puss" }
+          ]
+        },
+        dismiss_cat: {
+          text: "You dismiss Puss and leave him to his own devices. Soon, you hear tales of a remarkable cat charming the nobility.",
+          choices: []
+        },
+        equip_puss: {
+          text: "With boots and a bag, Puss sets off to capture game and impress the king. What should he do next?",
+          choices: [
+            { text: "Visit the King", next: "visit_king" },
+            { text: "Seek Out Adventure", next: "seek_adventure" }
+          ]
+        },
+        deny_puss: {
+          text: "Puss decides to proceed without your help and begins his quest alone. Will he succeed?",
+          choices: []
+        },
+        visit_king: {
+          text: "Puss presents his catch to the king, claiming it is a gift from his master, the 'Marquis of Carabas.' The king is intrigued. What happens next?",
+          choices: [
+            { text: "Invite the King to Meet Your Master", next: "meet_master" },
+            { text: "Impress the Princess", next: "impress_princess" }
+          ]
+        },
+        seek_adventure: {
+          text: "Puss ventures into the forest and encounters a fierce ogre who rules the land. Will you confront the ogre or find another path?",
+          choices: [
+            { text: "Confront the Ogre", next: "confront_ogre" },
+            { text: "Search for Allies", next: "search_allies" }
+          ]
+        },
+        meet_master: {
+          text: "The king meets the miller, now the 'Marquis of Carabas,' and is impressed. Puss's plan is working!",
+          choices: []
+        },
+        impress_princess: {
+          text: "Puss charms the princess and arranges for her to meet his master. A royal romance begins.",
+          choices: []
+        },
+        confront_ogre: {
+          text: "Puss challenges the ogre to transform into a mouse, then quickly catches him. The land is freed!",
+          choices: []
+        },
+        search_allies: {
+          text: "Puss gathers allies and returns to challenge the ogre together. Justice prevails!",
+          choices: []
+        }
+      };
+
+      let stepsTaken = 0;
+      const maxProgressBeforeEnd = 100;
+
+      function renderScene(sceneKey) {
+        const scene = storyData[sceneKey];
+        document.getElementById("story").innerText = scene.text;
+        const choicesDiv = document.getElementById("choices");
+        choicesDiv.innerHTML = "";
+        scene.choices.forEach(choice => {
+          const button = document.createElement("button");
+          button.innerText = choice.text;
+          button.onclick = () => renderScene(choice.next);
+          choicesDiv.appendChild(button);
+        });
+        if (sceneKey !== "end") {
+          stepsTaken++;
+        }
+        updateProgressBar(sceneKey);
+      }
+
+      function updateProgressBar(sceneKey) {
+        const scene = storyData[sceneKey];
+        const isEnding = scene.choices.length === 0;
+        const progress = isEnding ? 100 : Math.min(stepsTaken * 10, maxProgressBeforeEnd);
+        document.getElementById("progress-bar").style.width = `${progress}%`;
+      }
+
+      renderScene("begin");
+    </script>
+  </body>
+</html>
